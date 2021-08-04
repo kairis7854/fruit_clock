@@ -71,10 +71,14 @@ const Clock = (props) =>{
 
   const onPause = () => {
     props.setIsRun(!props.isRun)
-    props.setNowMission({...props.nowMission,time:time})
+    setSmoke(false)
+    props.setNowMission({...props.nowMission,time:time,smoke: smoke ? true : false})
     props.setMission( mission => {
       mission.find((item)=>{
-        if(item.key === props.nowMission.key) return item.time = time
+        if(item.key === props.nowMission.key){
+          item.time = time
+          item.smoke = smoke ? true : false
+        } 
         return null
       })
       return mission
@@ -86,6 +90,9 @@ const Clock = (props) =>{
       alert('任務已完成!請選擇新的任務。')
       return
     }
+    if(props.nowMission.smoke === true){
+      setSmoke(true)
+    }
     props.setIsRun(!props.isRun)
     setTime(props.nowMission.time)
   }
@@ -93,11 +100,11 @@ const Clock = (props) =>{
   return(
     <div className='clock-wrap'>
       {/* <div className='test'>000</div> */}
-      <div className='clock-mission'>{smoke ? '休息' : props.nowMission.mission}{pauseButton}{playButton}</div>
-      {tomatoIMG}
-      {strawberryIMG}
-      {watermelonIMG}
-      {cantaloupeIMG}
+      <div className='clock-mission'>{smoke ? '休息' : props.nowMission.mission}{props.nowMission.smoke && '(休息)'}{pauseButton}{playButton}</div>
+        {tomatoIMG}
+        {strawberryIMG}
+        {watermelonIMG}
+        {cantaloupeIMG}
       <div>
        <p className='clock-Time'>{props.isRun ? getTime(time) : getTime(props.nowMission.time)}</p>
       </div>

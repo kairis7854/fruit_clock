@@ -10,20 +10,21 @@ const App =() => {
   const [isRun,setIsRun] = useState(false)
   const [listType,setListType] = useState(false)
   const [mission,setMission] = useState([
-      {key:1,mission:'打疫苗',time:10},
-      {key:4,mission:'吃飯',time:12},
-      {key:2,mission:'睡覺',time:1800},
-      {key:3,mission:'打代碼',time:1800}
+      {key:1,mission:'打疫苗',time:10,smoke:false},
+      {key:4,mission:'吃飯',time:12,smoke:false},
+      {key:2,mission:'睡覺',time:1800,smoke:false},
+      {key:3,mission:'打代碼',time:1800,smoke:false}
   ])
   const [nowMission,setNowMission] = useState({
     key:mission ? mission[0].key : '',
     mission:mission ? mission[0].mission : '任務',
     time:mission ? mission[0].time : 0,
+    smoke:mission ? mission[0].smoke : false,
   })
 
   const changeMission = (item)=>{
     if(!isRun){
-      setNowMission({key:item.key,mission:item.mission,time:item.time})
+      setNowMission({key:item.key,mission:item.mission,time:item.time,smoke:item.smoke})
       return
     }
     return
