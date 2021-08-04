@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.229c3290.chunk.css",
-    "main.js": "/static/js/main.2299103a.chunk.js",
-    "main.js.map": "/static/js/main.2299103a.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.1394a9d7.js",
-    "runtime-main.js.map": "/static/js/runtime-main.1394a9d7.js.map",
-    "static/js/2.aca6ab94.chunk.js": "/static/js/2.aca6ab94.chunk.js",
-    "static/js/2.aca6ab94.chunk.js.map": "/static/js/2.aca6ab94.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.229c3290.chunk.css.map": "/static/css/main.229c3290.chunk.css.map",
-    "static/js/2.aca6ab94.chunk.js.LICENSE.txt": "/static/js/2.aca6ab94.chunk.js.LICENSE.txt",
-    "static/media/blackout_harp1.c533454e.mp3": "/static/media/blackout_harp1.c533454e.mp3",
-    "static/media/blackout_harp2.b001a8e8.mp3": "/static/media/blackout_harp2.b001a8e8.mp3",
-    "static/media/fruitButton.less": "/static/media/watermelon.1bee71d4.png",
-    "static/media/pause-button.a5abb526.svg": "/static/media/pause-button.a5abb526.svg",
-    "static/media/play-button.bb43f381.svg": "/static/media/play-button.bb43f381.svg",
-    "static/media/plus.b03e3495.svg": "/static/media/plus.b03e3495.svg",
-    "static/media/shopping-list.aadce41e.svg": "/static/media/shopping-list.aadce41e.svg"
+    "main.css": "/fruit_clock/static/css/main.151c0f3e.chunk.css",
+    "main.js": "/fruit_clock/static/js/main.2299103a.chunk.js",
+    "main.js.map": "/fruit_clock/static/js/main.2299103a.chunk.js.map",
+    "runtime-main.js": "/fruit_clock/static/js/runtime-main.8e9b5ff0.js",
+    "runtime-main.js.map": "/fruit_clock/static/js/runtime-main.8e9b5ff0.js.map",
+    "static/js/2.aca6ab94.chunk.js": "/fruit_clock/static/js/2.aca6ab94.chunk.js",
+    "static/js/2.aca6ab94.chunk.js.map": "/fruit_clock/static/js/2.aca6ab94.chunk.js.map",
+    "index.html": "/fruit_clock/index.html",
+    "static/css/main.151c0f3e.chunk.css.map": "/fruit_clock/static/css/main.151c0f3e.chunk.css.map",
+    "static/js/2.aca6ab94.chunk.js.LICENSE.txt": "/fruit_clock/static/js/2.aca6ab94.chunk.js.LICENSE.txt",
+    "static/media/blackout_harp1.c533454e.mp3": "/fruit_clock/static/media/blackout_harp1.c533454e.mp3",
+    "static/media/blackout_harp2.b001a8e8.mp3": "/fruit_clock/static/media/blackout_harp2.b001a8e8.mp3",
+    "static/media/fruitButton.less": "/fruit_clock/static/media/watermelon.1bee71d4.png",
+    "static/media/pause-button.a5abb526.svg": "/fruit_clock/static/media/pause-button.a5abb526.svg",
+    "static/media/play-button.bb43f381.svg": "/fruit_clock/static/media/play-button.bb43f381.svg",
+    "static/media/plus.b03e3495.svg": "/fruit_clock/static/media/plus.b03e3495.svg",
+    "static/media/shopping-list.aadce41e.svg": "/fruit_clock/static/media/shopping-list.aadce41e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.1394a9d7.js",
+    "static/js/runtime-main.8e9b5ff0.js",
     "static/js/2.aca6ab94.chunk.js",
-    "static/css/main.229c3290.chunk.css",
+    "static/css/main.151c0f3e.chunk.css",
     "static/js/main.2299103a.chunk.js"
   ]
 }
