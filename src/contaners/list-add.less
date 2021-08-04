@@ -1,0 +1,84 @@
+.ListAdd-wrap{
+  display:flex;
+  flex-direction: column ;
+  justify-content:flex-start ;
+  height: 100%;
+  color:white;
+
+  .ListAdd-icon-listAdd-wrap{
+    border-bottom:1px white solid;
+    .ListAdd-icon-listAdd{
+      width: 25%;
+      filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(333deg) brightness(104%) contrast(100%);;
+      padding:5%;
+    }
+  }
+  
+  .ListAdd{
+    >button{
+      font-size: 2vw;
+      margin:5% 0;
+    }
+  }
+
+  .ListAdd-icon-list-wrap{
+    display:flex;
+    justify-content:center ;
+    align-items:center;
+    width: 100%;
+    border:1px white solid;
+    .ListAdd-icon-list{
+      filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(333deg) brightness(104%) contrast(100%);
+      width: 25%;
+      padding:5%;
+    }
+  }
+
+  @media (min-width:1025px){
+    padding-top:10vh;
+    font-size: 3vw;
+    input{
+      height: 3vw;
+      font-size: 3vw;
+      width: 100%;
+    }
+  }
+  @media (min-width:481px) and (max-width:1024px){
+    padding-top:10vh;
+    font-size: 4vw;
+    input{
+      height: 4vw;
+      font-size: 4vw;
+      width: 100%;
+    }
+  }
+  @media (max-width:480px) {
+    font-size: 5vw;
+    input{
+      height: 5vw;
+      font-size: 5vw;
+      width: 100%;
+    }
+    .ListAdd-icon-listAdd-wrap{
+      border-bottom:1px white solid;
+      .ListAdd-icon-listAdd{
+        width:20%;
+        filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(333deg) brightness(104%) contrast(100%);;
+        padding:5%;
+      }
+    }
+
+    .ListAdd-icon-list-wrap{
+      display:flex;
+      justify-content:center ;
+      align-items:center;
+      width: 100%;
+      border:1px white solid;
+      .ListAdd-icon-list{
+        filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(333deg) brightness(104%) contrast(100%);
+        width: 19%;
+        padding:4%;
+      }
+    }
+  }
+}

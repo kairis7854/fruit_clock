@@ -1,0 +1,68 @@
+.clock-wrap{
+  display:flex;
+  justify-content:center ;
+  align-items:center;
+  flex-direction: column ;
+  height: 100%;
+
+  .clock-mission{
+    display:flex;
+    flex-direction: row ;
+    justify-content:center ;
+    align-items:center;
+    color:white;
+    margin-top:-20%;
+    margin-left:4vw;
+    margin-bottom:10%;
+    font-size: 4vw;
+    height: 4vw;
+    .clock-icon-play{
+      height: 4vw;
+      padding-left:1vw;
+    }
+  }
+
+  .clock-icon{
+    width:5vw ;
+    margin-left:0.5vw
+  }
+  .clock-fruit{
+    margin-bottom:-10%;
+
+    @media (min-width:1025px){
+      height: 30vw;
+      width: 30vw;
+    }
+    @media (min-width:481px) and (max-width:1024px){
+      margin-bottom:-30%;
+      height: 43vw;
+      width: 43vw;
+    }
+    @media (max-width:480px) {
+      height: 50vw;
+      width: 50vw;
+    }
+  }
+  .clock-Time{
+    background:white;
+    color:black;
+    border:1px solid black;
+    border-radius: 10px;
+    
+    @media (min-width:1025px){
+      margin-top:-87%;
+      font-size: 7vw;
+      width: 17vw;
+    }
+    @media (min-width:481px) and (max-width:1024px){
+      margin-top:-40%;
+      font-size: 9vw;
+      width: 22vw;
+    }
+    @media (max-width:480px) {
+      margin-top:-83%;
+      font-size: 11vw;
+      width: 27vw;
+    }
+  }
+}
