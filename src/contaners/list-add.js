@@ -27,7 +27,6 @@ const ListAdd = props =>{
 
   return(
     <div className='ListAdd-wrap'>
-      {console.log('list-add')}
       <div className="ListAdd-icon-listAdd-wrap">
         <img src={iconListAdd} className="ListAdd-icon-listAdd" alt="logo" />
       </div>

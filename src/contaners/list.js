@@ -7,7 +7,6 @@ const List = props =>{
 
   return(
     <div className='list-wrap'>
-      {console.log('list')}
       <div className="list-icon-list-wrap">
         <img src={iconList} className="list-icon-list" alt="logo" />
       </div>
