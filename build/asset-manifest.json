@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/fruit_clock/static/css/main.151c0f3e.chunk.css",
-    "main.js": "/fruit_clock/static/js/main.23819996.chunk.js",
-    "main.js.map": "/fruit_clock/static/js/main.23819996.chunk.js.map",
+    "main.js": "/fruit_clock/static/js/main.72d72287.chunk.js",
+    "main.js.map": "/fruit_clock/static/js/main.72d72287.chunk.js.map",
     "runtime-main.js": "/fruit_clock/static/js/runtime-main.8e9b5ff0.js",
     "runtime-main.js.map": "/fruit_clock/static/js/runtime-main.8e9b5ff0.js.map",
     "static/js/2.aca6ab94.chunk.js": "/fruit_clock/static/js/2.aca6ab94.chunk.js",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.8e9b5ff0.js",
     "static/js/2.aca6ab94.chunk.js",
     "static/css/main.151c0f3e.chunk.css",
-    "static/js/main.23819996.chunk.js"
+    "static/js/main.72d72287.chunk.js"
   ]
 }

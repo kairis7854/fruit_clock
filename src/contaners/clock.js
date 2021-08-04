@@ -100,7 +100,7 @@ const Clock = (props) =>{
   return(
     <div className='clock-wrap'>
       {/* <div className='test'>000</div> */}
-      <div className='clock-mission'>{smoke ? '休息' : props.nowMission.mission}{props.nowMission.smoke && '(休息)'}{pauseButton}{playButton}</div>
+      <div className='clock-mission'>{smoke ? '休息' : props.nowMission.mission}{smoke ? null : props.nowMission.smoke && '(休息)'}{pauseButton}{playButton}</div>
         {tomatoIMG}
         {strawberryIMG}
         {watermelonIMG}
