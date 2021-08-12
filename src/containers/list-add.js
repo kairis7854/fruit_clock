@@ -38,7 +38,7 @@ const ListAdd = props =>{
       </div>
       <form className='ListAdd' onSubmit={onSubmit} >
         <label>
-          任務:
+          任務：
           <br/>
           <input
             name="mission"
@@ -48,14 +48,14 @@ const ListAdd = props =>{
         </label>
         <br />
         <label>
-          時間(分):
+          時間(分)：
           <input
             name="time"
             type="text"
             value={data.time}
             onChange={getData.bind(this)} />
         </label>
-        <button >確定</button>
+        <button className='ListAdd_button'>確定</button>
       </form>
       <div className="ListAdd-icon-list-wrap" onClick={()=>{props.setListType(false)}}>
           <img src={shoppingList} className="ListAdd-icon-list" alt="logo" />
