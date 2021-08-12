@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/fruit_clock/static/css/main.c6fc35f3.chunk.css",
+    "main.js": "/fruit_clock/static/js/main.d3046212.chunk.js",
+    "main.js.map": "/fruit_clock/static/js/main.d3046212.chunk.js.map",
+    "runtime-main.js": "/fruit_clock/static/js/runtime-main.8e9b5ff0.js",
+    "runtime-main.js.map": "/fruit_clock/static/js/runtime-main.8e9b5ff0.js.map",
+    "static/js/2.e5eb6347.chunk.js": "/fruit_clock/static/js/2.e5eb6347.chunk.js",
+    "static/js/2.e5eb6347.chunk.js.map": "/fruit_clock/static/js/2.e5eb6347.chunk.js.map",
+    "index.html": "/fruit_clock/index.html",
+    "static/css/main.c6fc35f3.chunk.css.map": "/fruit_clock/static/css/main.c6fc35f3.chunk.css.map",
+    "static/js/2.e5eb6347.chunk.js.LICENSE.txt": "/fruit_clock/static/js/2.e5eb6347.chunk.js.LICENSE.txt",
+    "static/media/blackout_harp1.c533454e.mp3": "/fruit_clock/static/media/blackout_harp1.c533454e.mp3",
+    "static/media/blackout_harp2.b001a8e8.mp3": "/fruit_clock/static/media/blackout_harp2.b001a8e8.mp3",
+    "static/media/fruitButton.less": "/fruit_clock/static/media/watermelon.1bee71d4.png",
+    "static/media/pause-button.a5abb526.svg": "/fruit_clock/static/media/pause-button.a5abb526.svg",
+    "static/media/play-button.bb43f381.svg": "/fruit_clock/static/media/play-button.bb43f381.svg",
+    "static/media/plus.b03e3495.svg": "/fruit_clock/static/media/plus.b03e3495.svg",
+    "static/media/shopping-list.aadce41e.svg": "/fruit_clock/static/media/shopping-list.aadce41e.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8e9b5ff0.js",
+    "static/js/2.e5eb6347.chunk.js",
+    "static/css/main.c6fc35f3.chunk.css",
+    "static/js/main.d3046212.chunk.js"
+  ]
+}
