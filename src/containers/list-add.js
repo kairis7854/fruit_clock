@@ -4,9 +4,15 @@ import iconListAdd from '../img/plus.svg'
 import shoppingList from '../img/shopping-list.svg'
 import './list-add.less'
 
+const reg = /^\d*?$/;
+
 const ListAdd = props =>{
   const [data,setData] = useState({key:'',mission:'',time:''})
   const getData = (e) => {
+    if(e.target.name === 'time' && !reg.test(e.target.value)){
+      alert('請輸入數字')
+      return 
+    }
     setData({...data,[e.target.name]:e.target.value})
   }
 
