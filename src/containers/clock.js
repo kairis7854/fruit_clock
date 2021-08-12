@@ -2,19 +2,19 @@ import React,{useState,useEffect} from 'react'
 import {useSelector} from 'react-redux'
 import icon_play from '../img/play-button.svg'
 import icon_pause from '../img/pause-button.svg'
-import start from '../music/blackout_harp1.mp3' 
-import end from '../music/blackout_harp2.mp3' 
-import tomato from "../img/fruit/tomato.png";
-import strawberry from "../img/fruit/strawberry.png";
-import watermelon from "../img/fruit/watermelon.png";
-import cantaloupe from "../img/fruit/cantaloupe.png";
+import start from '../music/blackout_harp1.mp3'
+import end from '../music/blackout_harp2.mp3'
+import tomato from "../img/fruit/tomato.png"
+import strawberry from "../img/fruit/strawberry.png"
+import watermelon from "../img/fruit/watermelon.png"
+import cantaloupe from "../img/fruit/cantaloupe.png"
 import './clock.less'
 
 function getTime(value){
-  let sec = value%60
+  let sec = value % 60
   let min = parseInt(value/60)
-  let sec0 = sec<10 ? 0 : '';
-  let min0 = min<10 ? 0 : '';
+  let sec0 = sec < 10 ? 0 : ''
+  let min0 = min < 10 ? 0 : ''
   let time = [`${min0}${min}:${sec0}${sec}`]
   return time
 }
@@ -27,7 +27,7 @@ const Clock = (props) =>{
   const [smoke,setSmoke] = useState(false)
 
   useEffect(() => {
-    let interval;
+    let interval
     if (props.isRun) {
         interval = setInterval(() => {
           setTime(time => time-1)
@@ -35,7 +35,7 @@ const Clock = (props) =>{
     } else {
       clearInterval(interval)
     }
-    return () => clearInterval(interval);
+    return () => clearInterval(interval)
   }, [props.isRun])
   
   useEffect(() => {
@@ -62,10 +62,10 @@ const Clock = (props) =>{
     }
   }, [time])// eslint-disable-line react-hooks/exhaustive-deps
 
-  const tomatoIMG = (<img className='clock-fruit' src={tomato} style={{display:fruitIMG ==='1' ? 'block' : 'none'}} alt='fruit'/>);
-  const strawberryIMG = (<img className='clock-fruit' src={strawberry} style={{display:fruitIMG ==='2' ? 'block' : 'none'}} alt='fruit'/>);
-  const watermelonIMG = (<img className='clock-fruit' src={watermelon} style={{display:fruitIMG ==='3' ? 'block' : 'none' }} alt='fruit'/>);
-  const cantaloupeIMG = (<img className='clock-fruit' src={cantaloupe} style={{display:fruitIMG ==='4' ? 'block' : 'none' }} alt='fruit'/>);
+  const tomatoIMG = (<img className='clock-fruit' src={tomato} style={{display:fruitIMG ==='1' ? 'block' : 'none'}} alt='fruit'/>)
+  const strawberryIMG = (<img className='clock-fruit' src={strawberry} style={{display:fruitIMG ==='2' ? 'block' : 'none'}} alt='fruit'/>)
+  const watermelonIMG = (<img className='clock-fruit' src={watermelon} style={{display:fruitIMG ==='3' ? 'block' : 'none' }} alt='fruit'/>)
+  const cantaloupeIMG = (<img className='clock-fruit' src={cantaloupe} style={{display:fruitIMG ==='4' ? 'block' : 'none' }} alt='fruit'/>)
   const pauseButton = (<img className='clock-icon' src={icon_pause} onClick={()=>{onPause()}} style={{display:props.isRun ? 'block' : 'none'}} alt='icon_pause'/>)
   const playButton = (<img className='clock-icon' src={icon_play} onClick={()=>{onPlay()}} style={{display:props.isRun ? 'none' : 'block'}} alt='icon_pause'/>)
 
