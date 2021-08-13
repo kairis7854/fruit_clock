@@ -1,6 +1,6 @@
 import React from 'react'
-import iconList from '../img/shopping-list.svg'
-import plus from '../img/plus.svg'
+import iconList from '../../img/shopping-list.svg'
+import plus from '../../img/plus.svg'
 import './list.less'
 
 const List = props =>{

@@ -1,13 +1,13 @@
 import React,{useState,useEffect} from 'react'
 import {useSelector} from 'react-redux'
-import icon_play from '../img/play-button.svg'
-import icon_pause from '../img/pause-button.svg'
-import start from '../music/blackout_harp1.mp3'
-import end from '../music/blackout_harp2.mp3'
-import tomato from "../img/fruit/tomato.png"
-import strawberry from "../img/fruit/strawberry.png"
-import watermelon from "../img/fruit/watermelon.png"
-import cantaloupe from "../img/fruit/cantaloupe.png"
+import icon_play from '../../img/play-button.svg'
+import icon_pause from '../../img/pause-button.svg'
+import start from '../../music/blackout_harp1.mp3'
+import end from '../../music/blackout_harp2.mp3'
+import tomato from "../../img/fruit/tomato.png"
+import strawberry from "../../img/fruit/strawberry.png"
+import watermelon from "../../img/fruit/watermelon.png"
+import cantaloupe from "../../img/fruit/cantaloupe.png"
 import './clock.less'
 
 function getTime(value){

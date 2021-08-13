@@ -1,9 +1,9 @@
 import React,{useState } from 'react'
-import Test from './containers/test'
-import FuitButton from './containers/fruitButton'
-import Clock from './containers/clock'
-import List from './containers/list'
-import ListAdd from './containers/list-add'
+import Test from './containers/test/test'
+import FuitButton from './containers/fruitButton/fruitButton'
+import Clock from './containers/clock/clock'
+import List from './containers/list/list'
+import ListAdd from './containers/list-add/list-add'
 import './app.less'
 
 const App =() => {

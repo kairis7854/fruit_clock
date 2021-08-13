@@ -1,7 +1,7 @@
 // import React,{Component} from 'react'
 // import {testAdd} from '../redux/actions/testAdd.js'
 // import {connect} from 'react-redux'
-// import './test.less'
+// import './test/test.less'
 
 
 // @connect(

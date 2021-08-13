@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import {nanoid} from 'nanoid'
-import iconListAdd from '../img/plus.svg'
-import shoppingList from '../img/shopping-list.svg'
+import iconListAdd from '../../img/plus.svg'
+import shoppingList from '../../img/shopping-list.svg'
 import './list-add.less'
 
 const reg = /^\d*?$/;

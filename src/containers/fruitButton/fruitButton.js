@@ -1,9 +1,9 @@
 import React from 'react'
 import {useDispatch } from 'react-redux'
-import {TOMATO} from '../redux/action-types.js'
-import {WATERMELON} from '../redux/action-types.js'
-import {STRAWBERRY} from '../redux/action-types.js'
-import {CANTALOUPE} from '../redux/action-types.js'
+import {TOMATO} from '../../redux/action-types.js'
+import {WATERMELON} from '../../redux/action-types.js'
+import {STRAWBERRY} from '../../redux/action-types.js'
+import {CANTALOUPE} from '../../redux/action-types.js'
 
 import './fruitButton.less'
 

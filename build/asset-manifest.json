@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/fruit_clock/static/css/main.cf59ea4e.chunk.css",
-    "main.js": "/fruit_clock/static/js/main.38fecf8a.chunk.js",
-    "main.js.map": "/fruit_clock/static/js/main.38fecf8a.chunk.js.map",
+    "main.css": "/fruit_clock/static/css/main.96c7ba42.chunk.css",
+    "main.js": "/fruit_clock/static/js/main.bddea5a5.chunk.js",
+    "main.js.map": "/fruit_clock/static/js/main.bddea5a5.chunk.js.map",
     "runtime-main.js": "/fruit_clock/static/js/runtime-main.8e9b5ff0.js",
     "runtime-main.js.map": "/fruit_clock/static/js/runtime-main.8e9b5ff0.js.map",
     "static/js/2.e5eb6347.chunk.js": "/fruit_clock/static/js/2.e5eb6347.chunk.js",
     "static/js/2.e5eb6347.chunk.js.map": "/fruit_clock/static/js/2.e5eb6347.chunk.js.map",
     "index.html": "/fruit_clock/index.html",
-    "static/css/main.cf59ea4e.chunk.css.map": "/fruit_clock/static/css/main.cf59ea4e.chunk.css.map",
+    "static/css/main.96c7ba42.chunk.css.map": "/fruit_clock/static/css/main.96c7ba42.chunk.css.map",
     "static/js/2.e5eb6347.chunk.js.LICENSE.txt": "/fruit_clock/static/js/2.e5eb6347.chunk.js.LICENSE.txt",
     "static/media/blackout_harp1.c533454e.mp3": "/fruit_clock/static/media/blackout_harp1.c533454e.mp3",
     "static/media/blackout_harp2.b001a8e8.mp3": "/fruit_clock/static/media/blackout_harp2.b001a8e8.mp3",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.8e9b5ff0.js",
     "static/js/2.e5eb6347.chunk.js",
-    "static/css/main.cf59ea4e.chunk.css",
-    "static/js/main.38fecf8a.chunk.js"
+    "static/css/main.96c7ba42.chunk.css",
+    "static/js/main.bddea5a5.chunk.js"
   ]
 }
