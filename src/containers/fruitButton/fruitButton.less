@@ -1,55 +1,54 @@
-.fruitButton-wrap{
+.fruitButton{
   height: 100%;
   width:100%;
   display:flex;
   justify-content:space-around;
   align-items:center;
 
-  .fruitButton_tomatoButton{
+  &__tomatoButton{
     background:linear-gradient(rgb(253, 172, 97),rgb(168, 113, 62),);
     border-radius:12%;
     padding:1vw;
-    .fruitButton_tomatoIMG{
-      width: 100%;
-      height: 100%;
-      background-image:url(../../img/fruit/tomato.png);
-      background-size: cover; 
-    }
   }
-  .fruitButton_strawberryButton{
+  &__tomatoIMG{
+    width: 100%;
+    height: 100%;
+    background-image:url(../../assets/img/fruit/tomato.png);
+    background-size: cover; 
+  }
+  &__strawberryButton{
     background:linear-gradient(rgb(255, 85, 85),rgb(102, 35, 35),);
     border-radius:12%;
     padding:1vw;
-    .fruitButton_strawberryIMG{
-      width: 100%;
-      height: 100%;
-      background-image:url(../../img/fruit/strawberry.png);
-      background-size: cover; 
-    }
   }
-  .fruitButton_watermelonButton{
+  &__strawberryIMG{
+    width: 100%;
+    height: 100%;
+    background-image:url(../../assets/img/fruit/strawberry.png);
+    background-size: cover; 
+  }
+  &__watermelonButton{
     background:linear-gradient(rgb(136, 255, 89),rgb(51, 92, 28),);
     border-radius:12%;
     padding:1vw;
-    .fruitButton_watermelonIMG{
-      width: 100%;
-      height: 100%;
-      background-image:url(../../img/fruit/watermelon.png);
-      background-size: cover; 
-    }
   }
-  .fruitButton_cantaloupeButton{
+  &__watermelonIMG{
+    width: 100%;
+    height: 100%;
+    background-image:url(../../assets/img/fruit/watermelon.png);
+    background-size: cover; 
+  }
+  &__cantaloupeButton{
     background:linear-gradient(rgb(199, 255, 96),rgb(73, 90, 32),);
     border-radius:12%;
     padding:1vw;
-    .fruitButton_cantaloupeIMG{
-      width: 100%;
-      height: 100%;
-      background-image:url(../../img/fruit/cantaloupe.png);
-      background-size: cover; 
-    }
   }
-
+  &__cantaloupeIMG{
+    width: 100%;
+    height: 100%;
+    background-image:url(../../assets/img/fruit/cantaloupe.png);
+    background-size: cover; 
+  }
   @media (min-width:1025px){
     flex-direction: column ;
     >button{

@@ -4,7 +4,6 @@ import {TOMATO} from '../../redux/action-types.js'
 import {WATERMELON} from '../../redux/action-types.js'
 import {STRAWBERRY} from '../../redux/action-types.js'
 import {CANTALOUPE} from '../../redux/action-types.js'
-
 import './fruitButton.less'
 
 const Decoration = () =>{
@@ -15,13 +14,12 @@ const Decoration = () =>{
   const watermelon =()=>{dispatch({type:WATERMELON})}
 
   return(
-    <div className='fruitButton-wrap'>
-        <button className='fruitButton_tomatoButton' onClick={()=>{tomato()}}><div className='fruitButton_tomatoIMG'/></button>
-        <button className='fruitButton_strawberryButton' onClick={()=>{strawberry()}}><div className='fruitButton_strawberryIMG'/></button>
-        <button className='fruitButton_watermelonButton' onClick={()=>{watermelon()}}><div className='fruitButton_watermelonIMG'/></button>
-        <button className='fruitButton_cantaloupeButton' onClick={()=>{cantaloupe()}}><div className='fruitButton_cantaloupeIMG'/></button>
+    <div className='fruitButton'>
+        <button className='fruitButton__tomatoButton' onClick={()=>{tomato()}}><div className='fruitButton__tomatoIMG'/></button>
+        <button className='fruitButton__strawberryButton' onClick={()=>{strawberry()}}><div className='fruitButton__strawberryIMG'/></button>
+        <button className='fruitButton__watermelonButton' onClick={()=>{watermelon()}}><div className='fruitButton__watermelonIMG'/></button>
+        <button className='fruitButton__cantaloupeButton' onClick={()=>{cantaloupe()}}><div className='fruitButton__cantaloupeIMG'/></button>
     </div>
   )
 }
-
 export default React.memo(Decoration);

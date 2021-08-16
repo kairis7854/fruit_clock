@@ -3,20 +3,20 @@ import {WATERMELON} from '../action-types.js'
 import {STRAWBERRY} from '../action-types.js'
 import {CANTALOUPE} from '../action-types.js'
 
-let initState = '1'
+let initState = 'TOMATO'
 
 export default function a(preState=initState,action){
   const {type,data} = action
 
   switch(type){
     case TOMATO:
-      return '1'
+      return 'TOMATO'
     case STRAWBERRY:
-      return '2'
+      return 'STRAWBERRY'
     case WATERMELON:
-      return '3'
+      return 'WATERMELON'
     case CANTALOUPE:
-      return '4'
+      return 'CANTALOUPE'
     default:
       return preState
   }

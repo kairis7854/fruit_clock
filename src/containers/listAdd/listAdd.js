@@ -1,8 +1,8 @@
 import React,{useState} from 'react'
 import {nanoid} from 'nanoid'
-import iconListAdd from '../../img/plus.svg'
-import shoppingList from '../../img/shopping-list.svg'
-import './list-add.less'
+import iconListAdd from '../../assets/img/icon/plus.svg'
+import shoppingList from '../../assets/img/icon/shopping-list.svg'
+import './listAdd.less'
 
 const reg = /^\d*?$/;
 
@@ -32,11 +32,11 @@ const ListAdd = props =>{
   }
 
   return(
-    <div className='ListAdd-wrap'>
-      <div className="ListAdd-icon-listAdd-wrap">
-        <img src={iconListAdd} className="ListAdd-icon-listAdd" alt="logo" />
+    <div className='ListAdd'>
+      <div className="ListAdd__iconAdd">
+        <img src={iconListAdd} className="ListAdd__iconAdd__IMG" alt="logo" />
       </div>
-      <form className='ListAdd' onSubmit={onSubmit} >
+      <form className='ListAdd__form' onSubmit={onSubmit} >
         <label>
           任務：
           <br/>
@@ -55,10 +55,10 @@ const ListAdd = props =>{
             value={data.time}
             onChange={getData.bind(this)} />
         </label>
-        <button className='ListAdd_button'>確定</button>
+        <button>確定</button>
       </form>
-      <div className="ListAdd-icon-list-wrap" onClick={()=>{props.setListType(false)}}>
-          <img src={shoppingList} className="ListAdd-icon-list" alt="logo" />
+      <div className="ListAdd__iconList" onClick={()=>{props.setListType(false)}}>
+          <img src={shoppingList} className="ListAdd__iconList__IMG" alt="logo" />
       </div>
     </div>
   )
@@ -68,3 +68,4 @@ function listEqual(prevProps, nextProps) {
   return prevProps.mission.length === nextProps.mission.length
 }
 export default React.memo(ListAdd, listEqual);
+

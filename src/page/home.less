@@ -1,0 +1,66 @@
+.home{
+  display:flex;
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(
+    rgb(0, 1, 49),rgb(27, 24, 49)15%,
+    rgb(37, 27, 83) 20%,rgb(41, 29, 99) ,rgb(48, 35, 114),
+    rgb(70, 23, 88) 40%,rgb(139, 41, 118) 55% ,rgb(171, 130, 187) 60% , 
+    rgb(96, 153, 105) 60% , rgb(22, 34, 22)  
+    );
+  
+  @media screen and (min-width:1025px){
+    flex-wrap:nowrap;
+    padding:5%;
+    &__FuitButton{
+      width: 20%;
+    }
+    &__Clock{
+      width: 60%;
+    }
+    &__List{
+      width: 20%;
+    }
+  }
+  @media screen and (min-width:481px) and (max-width:1024px){
+    
+    flex-wrap:wrap;
+    padding:5%;
+    &__FuitButton{
+      order:3;
+      width: 100%;
+      height: 20%;
+    }
+    &__Clock{
+      width: 70%;
+      height: 80%;
+    }
+    &__List{
+      width: 30%;
+      height: 80%;
+    }
+  }
+  @media screen and (max-width:480px) {
+    flex-wrap:wrap;
+    &__FuitButton{
+      padding:5%;
+      order:2;
+      width: 100%;
+      height: 20%;
+      background:rgb(32, 49, 32);
+    }
+    &__Clock{
+      order:1;
+      width: 100%;
+      height: 100%;
+    }
+    &__List{
+      padding:5%;
+      order:3;
+      width: 100%;
+      height: 100%;
+      background:rgb(32, 49, 32);
+    }
+  }
+}
+

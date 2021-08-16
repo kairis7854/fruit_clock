@@ -1,11 +1,10 @@
-.clock-wrap{
+.clock{
   display:flex;
   justify-content:center ;
   align-items:center;
   flex-direction: column ;
   height: 100%;
-
-  .clock-mission{
+  &__mission{
     display:flex;
     flex-direction: row ;
     justify-content:center ;
@@ -16,53 +15,48 @@
     margin-bottom:10%;
     font-size: 4vw;
     height: 4vw;
-    .clock-icon-play{
-      height: 4vw;
-      padding-left:1vw;
-    }
   }
-
-  .clock-icon{
+  &__switch{
     width:5vw ;
     margin-left:0.5vw;
     filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(333deg) brightness(104%) contrast(100%);
 
   }
-  .clock-fruit{
+  &__fruitIMG{
     margin-bottom:-10%;
-
+    // filter: grayscale(95%); 
     @media (min-width:1025px){
       height: 30vw;
       width: 30vw;
     }
     @media (min-width:481px) and (max-width:1024px){
-      margin-bottom:-30%;
+      margin-bottom:-60%;
       height: 43vw;
       width: 43vw;
     }
     @media (max-width:480px) {
+      margin-bottom:-30%;
       height: 50vw;
       width: 50vw;
     }
   }
-  .clock-Time{
+  &__time{
     background:white;
     color:black;
     border:1px solid black;
     border-radius: 10px;
-    
     @media (min-width:1025px){
-      margin-top:-87%;
+      margin-top:-95%;
       font-size: 7vw;
       width: 17vw;
     }
     @media (min-width:481px) and (max-width:1024px){
-      margin-top:-40%;
+      margin-top:-15%;
       font-size: 9vw;
       width: 22vw;
     }
     @media (max-width:480px) {
-      margin-top:-83%;
+      margin-top:-65%;
       font-size: 11vw;
       width: 27vw;
     }
