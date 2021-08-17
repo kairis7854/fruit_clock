@@ -18,8 +18,23 @@
     max-height: 50vh;
     overflow-x:auto;
     &__li{
+      position:relative;
       color:white;
-      padding:3% ;
+      padding-left:3% ;
+      &:hover::after{
+        content:'';
+        position:absolute;
+        top: 0;
+        left: 0;
+        background:linear-gradient(90deg, rgba(255, 255, 255, 0.295)0%, rgba(255, 255, 255, 0)100%);
+        width: 100%;
+        height: 100%;
+        animation:hover .2s;
+      }
+      @keyframes hover{
+        0%{width: 0;}
+        100%{width: 100%;}
+      }
     }
   }
   &__iconAdd{
@@ -38,6 +53,18 @@
   @media (min-width:1025px){
     padding-top:5vh;
     font-size: 3vw;
+    .list__ul__li{
+      height: 7vw;
+      line-height: 7vw;
+      &:active{
+        animation:active .2s;
+      }
+      @keyframes active{
+        0%{font-size: 3vw;}
+        50%{font-size: 3.3vw;}
+        100%{font-size: 3vw;}
+      }
+    }
   }
   @media (min-width:481px) and (max-width:1024px){
     padding-top:6vh;
@@ -46,6 +73,18 @@
       height: auto;
       max-height: 40vh;
       overflow-x:auto;
+      &__li{
+        height: 7vw;
+        line-height: 7vw;
+        &:active{
+          animation:active .2s;
+        }
+        @keyframes active{
+          0%{font-size: 4vw;}
+          50%{font-size: 4.3vw;}
+          100%{font-size: 4vw;}
+        }
+      }
     }
   }
   @media (max-width:480px) {
@@ -62,6 +101,18 @@
       height: auto;
       max-height: 400px;
       overflow-x:auto;
+      &__li{
+        height: 14vw;
+        line-height: 14vw;
+        &:active{
+          animation:active .2s;
+        }
+        @keyframes active{
+          0%{font-size: 7vw;}
+          50%{font-size: 7.3vw;}
+          100%{font-size: 7vw;}
+        }
+      }
     }
     &__iconAdd{
       display:flex;
