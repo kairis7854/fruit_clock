@@ -1,10 +1,12 @@
-import React from 'react'
+import React,{useState} from 'react'
 import ListItem from '../listItem/listItem'
 import ListAdd from '../listAdd/listAdd'
 import './list.less'
 
-export default function list(props){
-  const {isRun,mission,setMission,changeMission,setListType,listType} = props
+export default function List(props){
+  const {isRun} = props
+  const [listType,setListType] = useState(false)
+
   // const list = listType 
   //   ? <ListAdd mission={mission} setMission={setMission}  setListType={setListType}/>
   //   : <ListItem isRun={isRun} mission={mission} changeMission={changeMission} setListType={setListType}/> 
@@ -12,8 +14,8 @@ export default function list(props){
   return(
     <div className='list'>
       {/* {list} */}
-      <div style={{display:listType?'none':'block'}}><ListItem isRun={isRun} mission={mission} changeMission={changeMission}  setListType={setListType} /></div> 
-      <div style={{display:listType?'block':'none'}}><ListAdd mission={mission} setMission={setMission}  setListType={setListType}/></div>
+      <div style={{display:listType?'none':'block'}}><ListItem isRun={isRun} setListType={setListType}/></div> 
+      <div style={{display:listType?'block':'none'}}><ListAdd setListType={setListType}/></div>
     </div>
   )
 }

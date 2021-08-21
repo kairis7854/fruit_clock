@@ -1,13 +1,15 @@
 import React,{useState} from 'react'
-import {nanoid} from 'nanoid'
 import iconListAdd from '../../assets/img/icon/plus.svg'
 import shoppingList from '../../assets/img/icon/shopping-list.svg'
+import {db} from '../../common/Model'
 import './listAdd.less'
 
 const reg = /^\d*?$/;
 
 const ListAdd = props =>{
-  const [data,setData] = useState({key:'',mission:'',time:''})
+  const now = new Date()
+  const [data,setData] = useState({mission:'',time:''})
+  
   const getData = (e) => {
     if(e.target.name === 'time' && !reg.test(e.target.value)){
       alert('請輸入數字')
@@ -26,8 +28,8 @@ const ListAdd = props =>{
       alert('時間不能超過9999分鐘!')
       return
     }
-    props.setMission([...props.mission,{...data,time:data.time*60,key:nanoid()}])
-    setData({key:'',mission:'',time:''})
+    db.mission.add({ id:now.getTime(),mission:data.mission, time:data.time*2, smoke:false });
+    setData({mission:'',time:''})
     alert('添加任務成功!')
   }
 
@@ -64,8 +66,9 @@ const ListAdd = props =>{
   )
 }
 
-function listEqual(prevProps, nextProps) {
-  return prevProps.mission.length === nextProps.mission.length
-}
-export default React.memo(ListAdd, listEqual);
+// function listEqual(prevProps, nextProps) {
+//   return prevProps.mission.length === nextProps.mission.length
+// }
+// export default React.memo(ListAdd, listEqual);
+export default ListAdd
 
