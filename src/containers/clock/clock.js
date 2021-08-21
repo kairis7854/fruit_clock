@@ -65,7 +65,7 @@ const Clock = (props) =>{
 
   useEffect(() => { //時鐘邏輯
     if(!smoke && props.isRun && time === 0){
-      setTime(1)
+      setTime(3)
       setSmoke(true)
       audio_start.play()
       return
