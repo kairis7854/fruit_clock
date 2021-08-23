@@ -1,0 +1,42 @@
+.Reset{
+  width: 5vh;
+  height: 5vh;
+  margin-right:5vh;
+
+  &__imgWrap{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width: 5vh;
+    height: 5vh;
+    &__img{
+      width: 4vh;
+      height: 4vh;
+      background-image: url('../../assets/img/icon/Reset.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(333deg) brightness(104%) contrast(100%);
+      transition: .1s;
+      &:hover,&:active{
+        width: 5vh;
+        height: 5vh;
+      }
+    }
+  }
+  &__question{
+    position:absolute;
+    z-index:9;
+    width: 180px;
+    min-width:22vw;
+    background:black;
+    transform:translateX(-80%);
+    margin-top:1vh;
+    color:white;
+    font-size:2vh;
+    padding:1vh;
+    >input{
+      font-size:2vh;
+      margin-right:2vh;
+    }
+  }
+}
