@@ -46,7 +46,9 @@ const ListAdd = props =>{
             name="mission"
             type="text"
             value={data.mission}
-            onChange={getData} />
+            onChange={getData} 
+            autoComplete='off'
+            />
         </label>
         <br />
         <label>
@@ -55,7 +57,9 @@ const ListAdd = props =>{
             name="time"
             type="text"
             value={data.time}
-            onChange={getData.bind(this)} />
+            onChange={getData.bind(this)}
+            autoComplete='off'
+            />
         </label>
         <button>確定</button>
       </form>

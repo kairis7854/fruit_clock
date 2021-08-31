@@ -61,7 +61,7 @@ db.person.bulkAdd(
    {name:Carl,age:20}
   )
 db.person.put({name:Daniel,age:8})
-// 注意：若在配置'id++,name,age'時，第一個值也就是主鍵，沒設置id++讓id自增，會出現相同id名報錯。另一種方法是自創主鍵，使用id產生器為id命名
+// 注意：若在配置'id++,name,age'時，第一個值也就是主鍵，若沒設置id++讓id自增，後續新增時會出現相同id名導致報錯。另一種方法是自創主鍵，使用id產生器為id命名
 ```
 ↑ 三種都是對集合插入文檔\
 add()為插入一個文檔\

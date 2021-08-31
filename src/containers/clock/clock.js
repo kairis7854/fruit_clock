@@ -65,7 +65,7 @@ const Clock = (props) =>{
 
   useEffect(() => { //時鐘邏輯
     if(!smoke && props.isRun && time === 0){
-      setTime(3)
+      setTime(2)
       setSmoke(true)
       audio_start.play()
       return
@@ -75,7 +75,9 @@ const Clock = (props) =>{
       setSmoke(false)
       audio_end.play()
       db.mission.delete(nowMission.id)
+      db.plan.update(nowMission.id,{state:'done'})
       setNowMission({mission:'完成',time:0})
+
     }
   }, [time])// eslint-disable-line react-hooks/exhaustive-deps
 

@@ -1,0 +1,78 @@
+.Calendar{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width: 100%;
+  height: 100%;
+  background:black;
+  margin-top:-10vh;
+  display:none;
+
+  &__Top{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    flex-direction:row;
+    width: 90%;
+    height: 10%;
+    border:white 1px solid;
+    color:rgb(255, 255, 255);
+    font-size: 1.3em;
+    text-transform:uppercase;
+    letter-spacing:2px;
+
+    &__Year{
+      display:flex;
+      justify-content:space-around;
+      align-items:center;
+      flex-direction:row;
+      :nth-child(1){
+        margin-right:10px;
+      }
+    }
+
+    &__Month{
+      display:flex;
+      justify-content:space-around;
+      align-items:center;
+      flex-direction:row;    
+      :nth-child(1){
+        margin-right:10px;
+        width: 1.3em;
+        text-align: center;
+      } 
+  
+    }
+  }
+
+  &__ul{
+    display:flex;
+    justify-content:flex-start;
+    // align-items:stretch;
+    flex-wrap:  wrap ;
+    width: 90%;
+    height: 70%;
+    // padding:1%;
+    color:white;
+
+    &__li{
+      width:14.28571%;
+      border:rgb(51, 51, 51) 1px solid;
+      padding:.5%;
+      height: 20%;
+      overflow:hidden;
+      // :nth-child(2){
+      //   background:green;
+      // }
+      &:hover{
+        border:white 1px solid;
+      }
+      &__ul{
+        height: 80%;
+        overflow:auto;
+   
+      }
+    }
+  }
+}
