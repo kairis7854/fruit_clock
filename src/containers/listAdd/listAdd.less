@@ -8,12 +8,11 @@
   &__iconAdd{
     border-bottom:1px white solid;
     &__IMG{
-      width: 25%;
+      width: 22%;
       filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(333deg) brightness(104%) contrast(100%);
       padding:5%; 
     }
   }
-  
   &__form{
     padding:3%;
     input{
@@ -26,7 +25,6 @@
       margin:5% 0;
     }
   }
-
   &__iconList{
     display:flex;
     justify-content:center ;
@@ -35,12 +33,14 @@
     border:1px white solid; 
     &__IMG{
       filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(333deg) brightness(104%) contrast(100%);
-      width: 25%;
+      width: 22%;
       padding:5%;  
     }
   }
 
   @media (min-width:1025px){
+    width: 90%;
+    height: 100%;
     padding-top:5vh;
     font-size: 3vw;
     input{
@@ -52,8 +52,9 @@
     }
   }
   @media (min-width:481px) and (max-width:1024px){
-    padding-top:6vh;
-    font-size: 4vw;
+    padding-top:2vh;
+    width: 90%;
+    height: 100%;
     input{
       height: 4vw;
       font-size: 4vw;

@@ -70,12 +70,6 @@ class Calendar extends Component{
     this.setState({showForm:false})
   }
   openForm = (e) => {
-console.log(   this.state.initYear,
-  this.state.initMonth,
-  this.state.today,
-  this.state.year,
-  this.state.month,
-  this.state.date)
     this.setState({showForm:true,date:e})
   }
 
