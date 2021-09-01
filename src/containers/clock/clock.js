@@ -29,12 +29,12 @@ const Clock = (props) =>{
   const [time,setTime] = useState(Number)
   const [smoke,setSmoke] = useState(false)
   const [nowMission,setNowMission] = useState({id:'',mission: '',time:'',smoke:'',})
-  const tomatoIMG = (<img className='clock__fruitIMG' src={tomato} style={{display:fruitIMG ==='TOMATO' ? 'block' : 'none'}} alt='fruit'/>)
-  const strawberryIMG = (<img className='clock__fruitIMG' src={strawberry} style={{display:fruitIMG ==='STRAWBERRY' ? 'block' : 'none'}} alt='fruit'/>)
-  const watermelonIMG = (<img className='clock__fruitIMG' src={watermelon} style={{display:fruitIMG ==='WATERMELON' ? 'block' : 'none' }} alt='fruit'/>)
-  const cantaloupeIMG = (<img className='clock__fruitIMG' src={cantaloupe} style={{display:fruitIMG ==='CANTALOUPE' ? 'block' : 'none' }} alt='fruit'/>)
-  const pauseButton = (<img className='clock__switch' src={icon_pause} onClick={()=>{onPause()}} style={{display:props.isRun ? 'block' : 'none'}} alt='icon_pause'/>)
-  const playButton = (<img className='clock__switch' src={icon_play} onClick={()=>{onPlay()}} style={{display:props.isRun ? 'none' : 'block'}} alt='icon_pause'/>)
+  const tomatoIMG = (<img src={tomato} style={{display:fruitIMG ==='TOMATO' ? 'block' : 'none'}} alt='fruit'/>)
+  const strawberryIMG = (<img  src={strawberry} style={{display:fruitIMG ==='STRAWBERRY' ? 'block' : 'none'}} alt='fruit'/>)
+  const watermelonIMG = (<img src={watermelon} style={{display:fruitIMG ==='WATERMELON' ? 'block' : 'none' }} alt='fruit'/>)
+  const cantaloupeIMG = (<img src={cantaloupe} style={{display:fruitIMG ==='CANTALOUPE' ? 'block' : 'none' }} alt='fruit'/>)
+  const pauseButton = (<img className='clock__mission__switch' src={icon_pause} onClick={()=>{onPause()}} style={{display:props.isRun ? 'block' : 'none'}} alt='icon_pause'/>)
+  const playButton = (<img className='clock__mission__switch' src={icon_play} onClick={()=>{onPlay()}} style={{display:props.isRun ? 'none' : 'block'}} alt='icon_pause'/>)
 
   useEffect(()=>{ //從IndexedDB獲取數據
     db.mission.toArray().then((res)=>{
@@ -108,15 +108,16 @@ const Clock = (props) =>{
     <div className='clock'>
       {/* <div className='test'>000</div> */}
       <div className='clock__mission'>{smoke ? '休息' : nowMission.mission}{smoke ? null : nowMission.smoke && '(休息)'}{pauseButton}{playButton}</div>
-      <div>
+      <div className='clock__fruitIMG'>
         {tomatoIMG}
         {strawberryIMG}
+
         {watermelonIMG} 
         {cantaloupeIMG}
+        <p className='clock__fruitIMG__time'>{props.isRun ? getTime(time) : getTime(nowMission.time)}</p>
       </div>
-      <div>
-       <p className='clock__time'>{props.isRun ? getTime(time) : getTime(nowMission.time)}</p>
-      </div>
+ 
+
     </div>
   )
 }
