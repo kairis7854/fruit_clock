@@ -61,10 +61,12 @@ const CalendarForm = (props) => {
 
   const addPlan = () =>{
     const {initYear,initMonth,today,year,month,date } = props.timeInfo
-    const now = new Date(initYear, initMonth, today);
-    const select = new Date(year, month, date);
+    const now = new Date(initYear, initMonth-1, today);
+    const select = new Date(year, month-1, date);
+    const nowTime = now.getTime()
+    const selectTime = select.getTime()
 
-    if(now <= select){
+    if(nowTime <= selectTime){
       return(
         <div className='CalendarForm__inner__addPlan'>
           <strong> 新增計劃：</strong>

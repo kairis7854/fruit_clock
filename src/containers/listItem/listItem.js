@@ -16,8 +16,7 @@ function getTime(){
 }
 const ListItem = props =>{
   const data = useLiveQuery(() => db.mission.toArray());
-
-  const plan = useLiveQuery(()=>db.plan.where({
+  const plan = useLiveQuery(() => db.plan.where({
     year:getTime().year,
     month:getTime().month,
     date: getTime().date,

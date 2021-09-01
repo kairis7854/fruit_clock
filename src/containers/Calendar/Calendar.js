@@ -5,6 +5,11 @@ import {db} from '../../common/Model'
 
 import  './Calendar.less'
 
+function changeLength(e){
+  let res = e.toString()
+  if(res.length === 1 )res = `0${res}`
+  return res
+}
 
 class Calendar extends Component{
   state = {
@@ -19,11 +24,12 @@ class Calendar extends Component{
   }
   componentDidMount(){
     const now = new Date()　
-    const date = now.getDate();
-    const month = now.getMonth()+1;
-    const year = now.getFullYear();
+    const date = now.getDate()
+    const month = now.getMonth()+1
+    const year = now.getFullYear()
     const whichMonth = new Date(year,month,0)　
     const totalDate =  whichMonth.getDate()
+
     this.setState({
       initYear:year,
       initMonth:month,
@@ -34,12 +40,15 @@ class Calendar extends Component{
       totalDate:totalDate,  
     })
 
-    db.plan
+
+    db.plan  //檢查計畫是否逾期
     .where('state')
-    .equals('wait')
-    .and(res=>{return res.year <= year})
-    .and(res=>{return res.month <= month})
-    .and(res=>{return res.date <= date})
+    .notEqual('done')
+    .and(res=>{
+      let a = `${res.year}${changeLength(res.month)}${changeLength(res.date)}`
+      let b = `${year}${changeLength(month)}${changeLength(date)}`
+       return  a < b
+    })
     .modify({state:'fail'})
   }
 
@@ -61,6 +70,12 @@ class Calendar extends Component{
     this.setState({showForm:false})
   }
   openForm = (e) => {
+console.log(   this.state.initYear,
+  this.state.initMonth,
+  this.state.today,
+  this.state.year,
+  this.state.month,
+  this.state.date)
     this.setState({showForm:true,date:e})
   }
 
