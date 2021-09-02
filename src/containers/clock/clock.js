@@ -4,13 +4,8 @@ import icon_play from '../../assets/img/icon/play-button.svg'
 import icon_pause from '../../assets/img/icon/pause-button.svg'
 import start from '../../assets/music/blackout_harp1.mp3'
 import end from '../../assets/music/blackout_harp2.mp3'
-import tomato from "../../assets/img/fruit/tomato.png"
-import strawberry from "../../assets/img/fruit/strawberry.png"
-import watermelon from "../../assets/img/fruit/watermelon.png"
-import cantaloupe from "../../assets/img/fruit/cantaloupe.png"
 import {db} from '../../common/Model'
 import './clock.less'
-
 
 function getTime(value){
   let sec = value % 60
@@ -25,14 +20,10 @@ const audio_end = new Audio(end)
 
 const Clock = (props) =>{
   const data = useSelector(state => state.mission)
-  const fruitIMG = useSelector(state => state.fruit)
+  const speed = useSelector(state => state.speed)
   const [time,setTime] = useState(Number)
   const [smoke,setSmoke] = useState(false)
   const [nowMission,setNowMission] = useState({id:'',mission: '',time:'',smoke:'',})
-  const tomatoIMG = (<img src={tomato} style={{display:fruitIMG ==='TOMATO' ? 'block' : 'none'}} alt='fruit'/>)
-  const strawberryIMG = (<img  src={strawberry} style={{display:fruitIMG ==='STRAWBERRY' ? 'block' : 'none'}} alt='fruit'/>)
-  const watermelonIMG = (<img src={watermelon} style={{display:fruitIMG ==='WATERMELON' ? 'block' : 'none' }} alt='fruit'/>)
-  const cantaloupeIMG = (<img src={cantaloupe} style={{display:fruitIMG ==='CANTALOUPE' ? 'block' : 'none' }} alt='fruit'/>)
   const pauseButton = (<img className='clock__mission__switch' src={icon_pause} onClick={()=>{onPause()}} style={{display:props.isRun ? 'block' : 'none'}} alt='icon_pause'/>)
   const playButton = (<img className='clock__mission__switch' src={icon_play} onClick={()=>{onPlay()}} style={{display:props.isRun ? 'none' : 'block'}} alt='icon_pause'/>)
 
@@ -56,12 +47,12 @@ const Clock = (props) =>{
     if (props.isRun) {
         interval = setInterval(() => {
           setTime(time => time-1)
-        }, 1000)
+        }, speed)
     } else {
       clearInterval(interval)
     }
     return () => clearInterval(interval)
-  }, [props.isRun])
+  }, [props.isRun,speed])
 
   useEffect(() => { //時鐘邏輯
     if(!smoke && props.isRun && time === 0){
@@ -77,7 +68,6 @@ const Clock = (props) =>{
       db.mission.delete(nowMission.id)
       db.plan.update(nowMission.id,{state:'done'})
       setNowMission({mission:'完成',time:0})
-
     }
   }, [time])// eslint-disable-line react-hooks/exhaustive-deps
 
@@ -108,16 +98,9 @@ const Clock = (props) =>{
     <div className='clock'>
       {/* <div className='test'>000</div> */}
       <div className='clock__mission'>{smoke ? '休息' : nowMission.mission}{smoke ? null : nowMission.smoke && '(休息)'}{pauseButton}{playButton}</div>
-      <div className='clock__fruitIMG'>
-        {tomatoIMG}
-        {strawberryIMG}
-
-        {watermelonIMG} 
-        {cantaloupeIMG}
-        <p className='clock__fruitIMG__time'>{props.isRun ? getTime(time) : getTime(nowMission.time)}</p>
+      <div className='clock__timeWrap'>
+        <p className='clock__timeWrap__time'>{props.isRun ? getTime(time) : getTime(nowMission.time)}</p>
       </div>
- 
-
     </div>
   )
 }

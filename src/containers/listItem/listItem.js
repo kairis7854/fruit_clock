@@ -36,7 +36,6 @@ const ListItem = props =>{
       plan.forEach((item,index)=>{
         db.mission.add({ id:item.id,mission:item.mission, time:item.time*2, smoke:false });
         db.plan.update(item.id,{state:'start'})
-        console.log('a')
       })
     } 
   },[plan])

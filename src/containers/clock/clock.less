@@ -4,55 +4,51 @@
   align-items:center;
   flex-direction: column ;
   height: 100%;
-  @media (min-width:481px) and (max-width:1024px){
-    padding-top: 10%;
-  }
 
   &__mission{
     display:flex;
     justify-content:center;
     align-items: center;
-    width: auto;
     font-size: 30px;
-    color:white;
+    color:#a7ddff;
+    margin-bottom:10px;
     &__switch{
       width: 30px;
-      margin-left:0.5vw;
-      filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(333deg) brightness(104%) contrast(100%);
+      filter: invert(78%) sepia(10%) saturate(1791%) hue-rotate(180deg) brightness(107%) contrast(101%);  
     }
   }
 
-  &__fruitIMG{
+  &__timeWrap{
     display:flex;
     justify-content:center ;
     align-items:center;
-    >img{
-      width:100%;
-      height: 100%;
-    }
+    border:1px solid #a7ddff;
+    border-radius: 50%;
     @media (min-width:1025px){
-      height: 60%;
+      height: 50vh;
+      width: 50vh;
     }
     @media (min-width:481px) and (max-width:1024px){
-      height:60%;
+      height: 45vh;
+      width: 45vh;
     }
     @media (max-width:480px) {
-      height: 25%;
+      height: 70vw;
+      width: 70vw;
     }
     &__time{
       position:absolute;
-      background:white;
-      color:black;
-      border:1px solid black;
+      color: #a7ddff;
       border-radius: 10px;
+      font-family:-apple-system, 'Segoe UI','Open Sans', 'Helvetica Neue';
       @media (min-width:1025px){
-        font-size: 70px;
+        font-size: 90px;
       }
       @media (min-width:481px) and (max-width:1024px){
-        font-size: 50px;
+        font-size: 70px;
       }
       @media (max-width:480px) {
-        font-size: 30px;
+        font-size: 60px;
       }
     }
   }

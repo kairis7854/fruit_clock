@@ -2,12 +2,8 @@
   display:flex;
   width: 100%;
   height: 100%;
-  background:linear-gradient(
-    rgb(0, 1, 49),rgb(27, 24, 49)15%,
-    rgb(37, 27, 83) 20%,rgb(41, 29, 99) ,rgb(48, 35, 114),
-    rgb(70, 23, 88) 40%,rgb(139, 41, 118) 55% ,rgb(171, 130, 187) 60% , 
-    rgb(96, 153, 105) 60% , rgb(22, 34, 22)  
-    );
+  background-image: url('../../assets/img/background/nightSky.jpg');
+  background-size:cover;
   margin-top:-10vh;
   opacity:0;
   display:none;
@@ -15,7 +11,7 @@
   @media screen and (min-width:1025px){
     flex-wrap:nowrap;
     padding:5%;
-    &__FuitButton{
+    &__SpeedButton{
       width: 20%;
     }
     &__Clock{
@@ -29,7 +25,7 @@
     
     flex-wrap:wrap;
     padding:5%;
-    &__FuitButton{
+    &__SpeedButton{
       order:3;
       width: 100%;
       height: 20%;
@@ -45,12 +41,12 @@
   }
   @media screen and (max-width:480px) {
     flex-wrap:wrap;
-    &__FuitButton{
+    &__SpeedButton{
       padding:5%;
       order:2;
       width: 100%;
       height: 20%;
-      background:rgb(32, 49, 32);
+      background:#283B42;
     }
     &__Clock{
       order:1;
@@ -62,7 +58,7 @@
       order:3;
       width: 100%;
       height: 100%;
-      background:rgb(32, 49, 32);
+      background:#283B42;
     }
   }
 }
