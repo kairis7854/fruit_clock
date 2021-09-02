@@ -3,7 +3,8 @@
 連結：https://kairis7854.github.io/fruit_clock/
 
 
-![image](ReadMeIMG.png)
+![image](Readme-media.png)
+![image](Readme-calendar.png)
 ## 介紹
 1987年9月，法蘭西斯科．西里洛為了考試，需要念完三本書，\
 卻靜不下心，因為干擾太多，容易分心，也沒拚勁。\
