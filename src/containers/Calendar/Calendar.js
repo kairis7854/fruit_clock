@@ -83,30 +83,44 @@ class Calendar extends Component{
         </ul>
       </li>
     )
-    const monthOption = new Array(12).fill("").map((x, index) => <option key={index + 1}>{index + 1}</option>)
+    const monthOption = new Array(12).fill("").map(
+      (x, index) => <li key={index + 1} onClick={this.changeMonth} value={index + 1}>{index + 1}</li>
+    )
 
     return(
       <div className='Calendar' style={{display:!homeType ? 'flex':'none'}} >
         <div className='Calendar__Top'>
-          <div className='Calendar__Top__Year'>
-            <div>{this.state.year}</div>
-            <div>Year</div>
-            <select  onChange={this.changeYear}>
-              <option value="請選擇">請選擇</option>
-              <option value={this.state.initYear}>{this.state.initYear}</option>
-              <option value={this.state.initYear+1}>{this.state.initYear+1}</option>
-              <option value={this.state.initYear+2}>{this.state.initYear+2}</option>
-              <option value={this.state.initYear+3}>{this.state.initYear+3}</option>
-              <option value={this.state.initYear+4}>{this.state.initYear+4}</option>
-            </select>
+          <div className='Calendar__Top__Month'>       
+            <div className='Calendar__Top__Month__menu'>
+              <div className='Calendar__Top__Month__menu__select'>
+                <div>
+                  <div>{this.state.month}</div>
+                  <div className='Calendar__Top__Month__menu__select__icon'></div>
+                </div>
+                <ul className='Calendar__Top__Month__menu__select__ul'>
+                  {monthOption}
+                </ul>
+              </div> 
+            </div>
+            <div>Month</div>  
           </div>
-          <div className='Calendar__Top__Month'>
-            <div>{this.state.month}</div>
-            <div>Month</div>
-            <select defaultValue={this.state.month} onChange={this.changeMonth}>
-              <option>請選擇</option>
-              {monthOption}
-            </select>
+          <div className='Calendar__Top__Year'>       
+            <div className='Calendar__Top__Year__menu'>
+              <div className='Calendar__Top__Year__menu__select'>
+                <div>
+                  <div>{this.state.year}</div>
+                  <div className='Calendar__Top__Year__menu__select__icon'></div>
+                </div>
+                <ul className='Calendar__Top__Year__menu__select__ul'>
+                  <li onClick={this.changeYear} value={this.state.initYear}>{this.state.initYear}</li>
+                  <li onClick={this.changeYear} value={this.state.initYear+1}>{this.state.initYear+1}</li>
+                  <li onClick={this.changeYear} value={this.state.initYear+2}>{this.state.initYear+2}</li>
+                  <li onClick={this.changeYear} value={this.state.initYear+3}>{this.state.initYear+3}</li>
+                  <li onClick={this.changeYear} value={this.state.initYear+4}>{this.state.initYear+4}</li>
+                </ul>
+              </div> 
+            </div>
+            <div>Year</div>  
           </div>
         </div>
         <ul className='Calendar__ul'>

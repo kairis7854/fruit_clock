@@ -3,11 +3,11 @@ import {SLOW} from '../action-types.js'
 import {SPEEDY} from '../action-types.js'
 import {FAST} from '../action-types.js'
 
-let initState = 'NORMAL'
+let initState = 1000
 
 export default function a(preState=initState,action){
   const {type,data} = action
-  
+
   switch(type){
     case NORMAL:
       return data

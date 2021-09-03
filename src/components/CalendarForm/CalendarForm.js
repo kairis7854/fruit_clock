@@ -86,6 +86,7 @@ const CalendarForm = (props) => {
     <div className='CalendarForm'  > 
       <div className='CalendarForm__outside' onClick={props.closeForm}></div>
       <form className='CalendarForm__inner'>
+        <div className='CalendarForm__inner__close' onClick={props.closeForm}></div>
         <div className='CalendarForm__inner__date'>{props.timeInfo.date}</div>
         <div className='CalendarForm__inner__plan'>
           <strong> 計劃：</strong>
