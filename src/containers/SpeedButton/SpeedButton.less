@@ -6,19 +6,86 @@
   align-items:center;
   font-family:-apple-system, 'Segoe UI';
 
-  >button{
-    display:flex;
-    justify-content:center;
-    align-items:center;
+  button{
+    position:relative;
+    overflow:hidden;
     background-color: transparent;
     color:#a7ddff;
-    border-radius:12%;
-    padding:1vw;
     border:none;
     letter-spacing: 2px;
     cursor: pointer;
     &:hover{
-      border:#a7ddff 1px solid;
+      color:#283B42;
+      background:#54bbfc ;
+      box-shadow:0 0 5px #2aadff,
+                 0 0 25px #2aadff ,
+                 0 0 50px #2aadff ,
+                 0 0 200px #2aadff ;
+      // -webkit-box-reflect:below 1px linear-gradient(transparent,#0005) ;
+    }
+    
+    >span{
+      position:absolute;
+      display:block;
+      &:nth-child(1){
+        top:0;
+        left: -100%;
+        width: 100%;
+        height: 1px;
+        background:linear-gradient(90deg,transparent,#a7ddff);
+        animation: a1 1s linear 2;
+        animation-delay: 0s;
+      }
+      @keyframes a1 
+      {
+        0%{left:-100%}
+        100%{left:100%}
+      }
+
+      &:nth-child(3){
+        bottom:0;
+        left: -100%;
+        width: 100%;
+        height: .8px;
+        background:linear-gradient(270deg,transparent,#a7ddff);
+        animation: a3 1s linear 2;
+        animation-delay: 0s;
+      }
+      @keyframes a3 
+      {
+        0%{left:100%}
+        100%{left:-100%}
+      }
+      
+      &:nth-child(2){
+        right:0;
+        top: -100%;
+        width: 1px;
+        height: 100%;
+        background:linear-gradient(180deg,transparent,#a7ddff);
+        animation: a2 1s linear 2;
+        animation-delay: .5s;
+      }
+      @keyframes a2
+      {
+        0%{top:-100%}
+        100%{top:100%}
+      }
+
+      &:nth-child(4){
+        left:0;
+        top: 100%;
+        width: 1px;
+        height: 100%;
+        background:linear-gradient(0deg,transparent,#a7ddff);
+        animation: a4 1s linear 2;
+        animation-delay: .5s;
+      }
+      @keyframes a4
+      {
+        0%{top:100%}
+        100%{top:-100%}
+      }
     }
   }
   &__normalButton{

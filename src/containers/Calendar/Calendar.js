@@ -94,7 +94,7 @@ class Calendar extends Component{
             <div className='Calendar__Top__Month__menu'>
               <div className='Calendar__Top__Month__menu__select'>
                 <div>
-                  <div>{this.state.month}</div>
+                  <div className='Calendar__Top__Month__menu__select__title'>{this.state.month}</div>
                   <div className='Calendar__Top__Month__menu__select__icon'></div>
                 </div>
                 <ul className='Calendar__Top__Month__menu__select__ul'>

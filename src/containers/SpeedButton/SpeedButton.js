@@ -15,10 +15,34 @@ const SpeedButton = () =>{
 
   return(
     <div className='speedButton'>
-        <button className='speedButton__normalButton' onClick={normal}>NORMAL</button>
-        <button className='speedButton__slowButton' onClick={slow}>SLOW</button>
-        <button className='speedButton__speedyButton' onClick={speedy}>SPEEDY</button>
-        <button className='speedButton__fastButton' onClick={fast}>FAST</button>
+        <button className='speedButton__normalButton' onClick={normal}>
+          NORMAL
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <button className='speedButton__slowButton' onClick={slow}>
+          SLOW
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <button className='speedButton__speedyButton' onClick={speedy}>
+          SPEEDY
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <button className='speedButton__fastButton' onClick={fast}>
+          FAST
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
     </div>
   )
 }
