@@ -11,7 +11,7 @@ const SpeedButton = () =>{
   const normal =()=>{dispatch({type:NORMAL,data:1000})}
   const slow =()=>{dispatch({type:SLOW,data:2000})}
   const speedy =()=>{dispatch({type:SPEEDY,data:500})}
-  const fast =()=>{dispatch({type:FAST,data:6.7})}
+  const fast =()=>{dispatch({type:FAST,data:10})}
 
   return(
     <div className='speedButton'>

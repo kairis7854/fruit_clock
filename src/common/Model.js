@@ -30,6 +30,7 @@ export function resetDatabase() {
   return db.transaction('rw', db.mission, db.plan, async () => {
     await Promise.all(db.tables.map(table => table.clear()));
     await populate();
+    await window.location.reload() 
   });
 }
 

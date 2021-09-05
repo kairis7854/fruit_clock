@@ -9,8 +9,7 @@ export default function Reset(){
     setDisplay(!display)
   }
   const onResetDatabase = () => {
-    resetDatabase()
-    window.location.reload()
+      resetDatabase()
   }
   
   return(
