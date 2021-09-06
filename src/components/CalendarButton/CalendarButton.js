@@ -12,6 +12,7 @@ export default function CalendarButton(props){
         <div className='CalendarButton__CalendarButtonImgWrap__IMG' 
           onClick={()=>{setHomeType(!homeType)}}
           style={{  backgroundImage:homeType ? `url(${calendar})` : `url(${clock})`}}
+          title={ homeType ? '設定計劃' : '番茄鐘'}
         >
         </div>
       </div>

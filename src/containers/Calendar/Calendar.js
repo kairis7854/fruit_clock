@@ -76,9 +76,9 @@ class Calendar extends Component{
   render(){
     let {homeType} = this.props 
     const dateLi = new Array(this.state.totalDate).fill("").map((x, index) => 
-      <li className='Calendar__ul__li' key={index + 1} onClick={()=>{this.openForm(index + 1)}}>
+      <li className='Calendar__loader__ul__li' key={index + 1} onClick={()=>{this.openForm(index + 1)}}>
         <div>{index + 1}</div>
-        <ul className='Calendar__ul__li__ul'>
+        <ul className='Calendar__loader__ul__li__ul'>
           <CalendarLiContent dateInfo={{year:this.state.year,month:this.state.month,date:index + 1}}/>
         </ul>
       </li>
@@ -89,56 +89,58 @@ class Calendar extends Component{
 
     return(
       <div className='Calendar' style={{display:!homeType ? 'flex':'none'}} >
-        <div className='Calendar__Top'>
-          <div className='Calendar__Top__Month'>       
-            <div className='Calendar__Top__Month__menu'>
-              <div className='Calendar__Top__Month__menu__select'>
-                <div>
-                  <div className='Calendar__Top__Month__menu__select__title'>{this.state.month}</div>
-                  <div className='Calendar__Top__Month__menu__select__icon'></div>
-                </div>
-                <ul className='Calendar__Top__Month__menu__select__ul'>
-                  {monthOption}
-                </ul>
+        <div className='Calendar__loader'> 
+          <div className='Calendar__loader__Top'>
+            <div className='Calendar__loader__Top__Month'>       
+              <div className='Calendar__loader__Top__Month__menu'>
+                <div className='Calendar__loader__Top__Month__menu__select'>
+                  <div>
+                    <div >{this.state.month}</div>
+                    <div>月</div>  
+                    <div className='Calendar__loader__Top__Month__menu__select__icon'></div>
+                  </div>
+                  <ul className='Calendar__loader__Top__Month__menu__select__ul'>
+                    {monthOption}
+                  </ul>
+                </div> 
+              </div>
+            </div>
+            <div className='Calendar__loader__Top__Year'>       
+              <div className='Calendar__loader__Top__Year__menu'>
+                <div className='Calendar__loader__Top__Year__menu__select'>
+                  <div>
+                    <div>{this.state.year}</div>
+                    <div>年</div> 
+                    <div className='Calendar__loader__Top__Year__menu__select__icon'></div>
+                  </div>
+                  <ul className='Calendar__loader__Top__Year__menu__select__ul'>
+                    <li onClick={this.changeYear} value={this.state.initYear}>{this.state.initYear}</li>
+                    <li onClick={this.changeYear} value={this.state.initYear+1}>{this.state.initYear+1}</li>
+                    <li onClick={this.changeYear} value={this.state.initYear+2}>{this.state.initYear+2}</li>
+                    <li onClick={this.changeYear} value={this.state.initYear+3}>{this.state.initYear+3}</li>
+                    <li onClick={this.changeYear} value={this.state.initYear+4}>{this.state.initYear+4}</li>
+                  </ul>
+                </div> 
               </div> 
             </div>
-            <div>Month</div>  
           </div>
-          <div className='Calendar__Top__Year'>       
-            <div className='Calendar__Top__Year__menu'>
-              <div className='Calendar__Top__Year__menu__select'>
-                <div>
-                  <div>{this.state.year}</div>
-                  <div className='Calendar__Top__Year__menu__select__icon'></div>
-                </div>
-                <ul className='Calendar__Top__Year__menu__select__ul'>
-                  <li onClick={this.changeYear} value={this.state.initYear}>{this.state.initYear}</li>
-                  <li onClick={this.changeYear} value={this.state.initYear+1}>{this.state.initYear+1}</li>
-                  <li onClick={this.changeYear} value={this.state.initYear+2}>{this.state.initYear+2}</li>
-                  <li onClick={this.changeYear} value={this.state.initYear+3}>{this.state.initYear+3}</li>
-                  <li onClick={this.changeYear} value={this.state.initYear+4}>{this.state.initYear+4}</li>
-                </ul>
-              </div> 
-            </div>
-            <div>Year</div>  
-          </div>
+          <ul className='Calendar__loader__ul'>
+            {dateLi}
+          </ul>
+          <div className='CalendarForm' style={{display:this.state.showForm?'block':'none'}} >
+            <CalendarForm 
+              closeForm={this.closeForm} 
+              timeInfo={{
+                year:this.state.year,
+                month:this.state.month,
+                date:this.state.date,
+                initYear:this.state.initYear,
+                initMonth:this.state.initMonth,
+                today:this.state.today,
+              }}
+            />
+          </div>  
         </div>
-        <ul className='Calendar__ul'>
-          {dateLi}
-        </ul>
-        <div className='CalendarForm' style={{display:this.state.showForm?'block':'none'}} >
-          <CalendarForm 
-            closeForm={this.closeForm} 
-            timeInfo={{
-              year:this.state.year,
-              month:this.state.month,
-              date:this.state.date,
-              initYear:this.state.initYear,
-              initMonth:this.state.initMonth,
-              today:this.state.today,
-            }}
-          />
-        </div>  
       </div>
     )
   }

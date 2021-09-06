@@ -15,13 +15,13 @@ const CalendarLiContent = (props) => {
   const state = (e) =>{
     switch (e.state) {
       case 'wait':
-        return <strong style={{color:'purple'}}>(等待)</strong>  
+        return <strong style={{color:'rgb(231, 220, 60)'}}>等待</strong>  
       case 'start':
-        return <strong style={{color:'blue'}}>(可執行)</strong>  
+        return <strong style={{color:'white'}}>可執行</strong>  
       case 'done':
-        return <strong style={{color:'green'}}>(完成)</strong>  
+        return <strong style={{color:'rgb(137, 218, 56)'}}>完成</strong>  
       case 'fail':
-        return <strong style={{color:'red'}}>(逾期)</strong>  
+        return <strong style={{color:'rgb(248, 145, 252)'}}>逾期</strong>  
       default:
         return null
     }

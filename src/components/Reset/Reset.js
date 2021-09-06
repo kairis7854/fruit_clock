@@ -13,7 +13,7 @@ export default function Reset(){
   }
   
   return(
-    <div className='Reset'>
+    <div className='Reset' title='初始化'>
       <div className='Reset__imgWrap'>
         <div className='Reset__imgWrap__img' onClick={()=>{clickReset()}}></div>
       </div>
