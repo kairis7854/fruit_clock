@@ -1,21 +1,20 @@
 {
   "files": {
-    "main.css": "/fruit_clock/static/css/main.8f7363c2.chunk.css",
-    "main.js": "/fruit_clock/static/js/main.031ce532.chunk.js",
-    "main.js.map": "/fruit_clock/static/js/main.031ce532.chunk.js.map",
+    "main.css": "/fruit_clock/static/css/main.207eb077.chunk.css",
+    "main.js": "/fruit_clock/static/js/main.81bcacbd.chunk.js",
+    "main.js.map": "/fruit_clock/static/js/main.81bcacbd.chunk.js.map",
     "runtime-main.js": "/fruit_clock/static/js/runtime-main.8e9b5ff0.js",
     "runtime-main.js.map": "/fruit_clock/static/js/runtime-main.8e9b5ff0.js.map",
     "static/js/2.dbddd2f3.chunk.js": "/fruit_clock/static/js/2.dbddd2f3.chunk.js",
     "static/js/2.dbddd2f3.chunk.js.map": "/fruit_clock/static/js/2.dbddd2f3.chunk.js.map",
     "index.html": "/fruit_clock/index.html",
-    "static/css/main.8f7363c2.chunk.css.map": "/fruit_clock/static/css/main.8f7363c2.chunk.css.map",
+    "static/css/main.207eb077.chunk.css.map": "/fruit_clock/static/css/main.207eb077.chunk.css.map",
     "static/js/2.dbddd2f3.chunk.js.LICENSE.txt": "/fruit_clock/static/js/2.dbddd2f3.chunk.js.LICENSE.txt",
     "static/media/blackout_harp1.c533454e.mp3": "/fruit_clock/static/media/blackout_harp1.c533454e.mp3",
     "static/media/blackout_harp2.b001a8e8.mp3": "/fruit_clock/static/media/blackout_harp2.b001a8e8.mp3",
-    "static/media/calendar.2fd75d1b.svg": "/fruit_clock/static/media/calendar.2fd75d1b.svg",
-    "static/media/CalendarForm.less": "/fruit_clock/static/media/cancel.da5c4222.svg",
-    "static/media/clock.67daedf5.svg": "/fruit_clock/static/media/clock.67daedf5.svg",
+    "static/media/CalendarButton.less": "/fruit_clock/static/media/calendar.2fd75d1b.svg",
     "static/media/Calendar.less": "/fruit_clock/static/media/down-arrow.e5284d57.svg",
+    "static/media/ClockButton.less": "/fruit_clock/static/media/clock.67daedf5.svg",
     "static/media/Main.less": "/fruit_clock/static/media/nightSky.c3482c0b.jpg",
     "static/media/pause-button.a5abb526.svg": "/fruit_clock/static/media/pause-button.a5abb526.svg",
     "static/media/play-button.bb43f381.svg": "/fruit_clock/static/media/play-button.bb43f381.svg",
@@ -25,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.8e9b5ff0.js",
     "static/js/2.dbddd2f3.chunk.js",
-    "static/css/main.8f7363c2.chunk.css",
-    "static/js/main.031ce532.chunk.js"
+    "static/css/main.207eb077.chunk.css",
+    "static/js/main.81bcacbd.chunk.js"
   ]
 }
