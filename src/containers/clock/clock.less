@@ -9,14 +9,21 @@
     display:flex;
     justify-content:center;
     align-items: center;
-    font-size: 30px;
-    line-height: 30px;
-    color:#a7ddff;
-    margin-bottom:10px;
+
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color:white;
+    margin-bottom:1em;
+    backdrop-filter:blur(5px);
+    width: auto;
+    padding:.1em .4em;
+    border-radius: 50px;
     &__switch{
+      margin:0 .1em;
       cursor: pointer;
-      width: 30px;
-      filter: invert(78%) sepia(10%) saturate(1791%) hue-rotate(180deg) brightness(107%) contrast(101%);  
+      width:1em;
+      // filter: invert(78%) sepia(10%) saturate(1791%) hue-rotate(180deg) brightness(107%) contrast(101%);  
+      filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(333deg) brightness(104%) contrast(100%);
     }
   }
 
@@ -24,7 +31,7 @@
     display:flex;
     justify-content:center ;
     align-items:center;
-    border:1px solid #a7ddff;
+    border:1px solid white;
     border-radius: 50%;
     min-width: 240px;
     min-height: 240px;
@@ -42,7 +49,7 @@
     }
     &__time{
       position:absolute;
-      color: #a7ddff;
+      color: #ffffff;
       border-radius: 10px;
       font-family:-apple-system, 'Segoe UI','Open Sans', 'Helvetica Neue';
       @media (min-width:1025px){

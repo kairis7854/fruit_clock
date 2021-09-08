@@ -40,25 +40,26 @@ const ListAdd = props =>{
       </div>
       <form className='ListAdd__form' onSubmit={onSubmit} >
         <label>
-          任務：
-          <br/>
+          <h2 className='ListAdd__form__title'>新增任務：</h2>
           <input
             name="mission"
             type="text"
             value={data.mission}
             onChange={getData} 
             autoComplete='off'
+            placeholder='名稱'
             />
         </label>
         <br />
         <label>
-          時間(分)：
+          {/* 時間(分)： */}
           <input
             name="time"
             type="text"
             value={data.time}
             onChange={getData.bind(this)}
             autoComplete='off'
+            placeholder='時間(分)'
             />
         </label>
         <button>確定</button>

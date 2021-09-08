@@ -4,7 +4,7 @@
   justify-content:flex-start ;
   height: 100%;
   color:rgb(255, 255, 255);
-
+ 
   &__iconAdd{
     border-bottom:1px white solid;
     &__IMG{
@@ -14,16 +14,52 @@
     }
   }
   &__form{
-    padding:3%;
+    padding:.6em ;
+    backdrop-filter:blur(5px);
+    font-size: .8em;
+    &__title{
+      letter-spacing:1px;
+      font-weight:600;
+      margin-bottom: 1em;
+    }
     input{
-      margin:3% 0 2% 0;
+      width: 100%;
+      margin-top:.8vw;
+      padding:.3em ;
       border:none;
       outline:none;
+      box-shadow: 0 1px 2px rgba(118, 239, 255, 0.432);
+      background:rgba(255, 255, 255, 0.932);
+      color:black;
+      border-radius:2px;
+      &:hover,&:focus{
+        box-shadow: 0px  1px 1.5px 1px rgba(118, 239, 255, 0.678);
+        background:rgb(255, 255, 255);
+      }
+      &::placeholder{
+        color:#666;
+      }
     }
     >button{
       cursor: pointer;
-      font-size: 2vw;
-      margin:5% 0;
+      margin-top:1.5vw;
+      padding:.2em 1.2em;
+      border:none;
+      outline:none;
+      border-radius:50px;
+      font-size: .8em;
+      font-weight: 600;
+      background:white;
+      color:#396eff;
+      transition:.1s;
+      margin-bottom: 1em;
+      &:hover{
+        color:rgb(37, 70, 255);
+      }
+      &:active{
+          background:#4c49ff;
+          color:rgb(255, 255, 255);
+      }
     }
   }
   &__iconList{
@@ -41,32 +77,22 @@
   }
 
   @media (min-width:1025px){
-    width: 90%;
-    height: 100%;
     padding-top:5vh;
-    font-size: 2vw;
-    input{
-      height: 2vw;
-      font-size: 2vw;
-      width: 100%;
-      border-radius:2vw;
-      padding-left:1vw;
-    }
+    width: 90%;
   }
   @media (min-width:481px) and (max-width:1024px){
     padding-top:2vh;
     width: 90%;
     height: 100%;
+    h2{
+      font-size: 1.3em;
+    }
     input{
-      height: 3vw;
-      font-size: 3vw;
       width: 100%;
-      border-radius:3vw;
-      padding-left:1.5vw;
+      margin-bottom: .5em;
     }
   }
   @media (max-width:480px) {
-    font-size: 5vw;
     &__iconAdd{
       border-bottom:1px white solid;
       &__IMG{
@@ -75,19 +101,19 @@
         padding:5%;
       }
     }
+    h2{
+      font-size: 1.3em;
+      margin-bottom:1em;
+    }
     input{
       min-height: 30px;
-      height: 5vw;
-      font-size: 5vw;
-      width: 100%;
-      border-radius:5vw;
-      padding-left:2vw;
+      font-size: 1em;
+      border-radius:50px;
+      margin-bottom: .5em;
     }
     button{
-      width: 55px;
-      height: 30px;
+
     }
-    
     &__iconList{
       display:flex;
       justify-content:center ;

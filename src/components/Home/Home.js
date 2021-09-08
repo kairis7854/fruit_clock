@@ -9,9 +9,9 @@ export default function Home(){
   
   return(
     <div className='Home'>
-      <TopNav homeType={homeType} setHomeType={setHomeType}/>
+      <TopNav setHomeType={setHomeType}/>
       <Main homeType={homeType}/>
-      <Calendar homeType={homeType}/>
+      <Calendar homeType={homeType} setHomeType={setHomeType}/>
     </div>
   )
 }

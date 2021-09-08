@@ -91,6 +91,7 @@ class Calendar extends Component{
       <div className='Calendar' style={{display:!homeType ? 'flex':'none'}} >
         <div className='Calendar__loader'> 
           <div className='Calendar__loader__Top'>
+          <div className='Calendar__loader__Top__close' onClick={()=>{this.props.setHomeType(true)}}></div>
             <div className='Calendar__loader__Top__Month'>       
               <div className='Calendar__loader__Top__Month__menu'>
                 <div className='Calendar__loader__Top__Month__menu__select'>
@@ -127,7 +128,8 @@ class Calendar extends Component{
           <ul className='Calendar__loader__ul'>
             {dateLi}
           </ul>
-          <div className='CalendarForm' style={{display:this.state.showForm?'block':'none'}} >
+        </div>
+        <div className='Calendar__Form' style={{display:this.state.showForm?'block':'none'}} >
             <CalendarForm 
               closeForm={this.closeForm} 
               timeInfo={{
@@ -139,8 +141,7 @@ class Calendar extends Component{
                 today:this.state.today,
               }}
             />
-          </div>  
-        </div>
+          </div> 
       </div>
     )
   }
