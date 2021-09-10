@@ -25,6 +25,10 @@ const CalendarForm = (props) => {
       alert('任務名稱或時間不能為空!')
       return
     }
+    if(mission.length > 10){
+      alert('任務名稱不能超過10個字!')
+      return
+    }
     if(time > 9999){
       alert('時間不能超過9999分鐘!')
       return

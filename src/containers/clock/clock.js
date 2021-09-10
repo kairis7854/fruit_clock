@@ -24,8 +24,6 @@ const Clock = (props) =>{
   const [time,setTime] = useState(Number)
   const [smoke,setSmoke] = useState(false)
   const [nowMission,setNowMission] = useState({id:'',mission: '',time:'',smoke:'',})
-  const pauseButton = (<img className='clock__mission__switch' src={icon_pause} onClick={()=>{onPause()}} style={{display:props.isRun ? 'block' : 'none'}} alt='icon_pause'/>)
-  const playButton = (<img className='clock__mission__switch' src={icon_play} onClick={()=>{onPlay()}} style={{display:props.isRun ? 'none' : 'block'}} alt='icon_pause'/>)
 
   useEffect(()=>{ //從IndexedDB獲取數據
     db.mission.toArray().then((res)=>{
@@ -80,7 +78,7 @@ const Clock = (props) =>{
   
   const onPlay = () => {
     if(nowMission.id === 0){
-      alert('請創建新的任務。')
+      alert('請選擇或創建新的任務。')
       return
     }
     if(nowMission.mission === '完成'){
@@ -94,12 +92,28 @@ const Clock = (props) =>{
     setTime(nowMission.time)
   }
 
+  const pauseButton = (
+    <div className='clock__timeWrap__switch'  style={{display:props.isRun ? 'flex' : 'none'}} onClick={()=>{onPause()}}>
+      <img  src={icon_pause} alt='icon_pause'/>
+      <div>暫停</div>
+    </div>
+  )
+  const playButton = (
+    <div className='clock__timeWrap__switch' style={{display:props.isRun ? 'none' : 'flex'}}  onClick={()=>{onPlay()}} > 
+      <img  src={icon_play} alt='icon_pause'/>
+      <div>開始</div>
+    </div>
+  )
+
   return(
     <div className='clock'>
       {/* <div className='test'>000</div> */}
-      <div className='clock__mission'>{pauseButton}{playButton}{smoke ? '休息' : nowMission.mission}{smoke ? null : nowMission.smoke && '(休息)'}</div>
+      <div className='clock__mission'>{smoke ? '休息' : nowMission.mission}{smoke ? null : nowMission.smoke && '(休息)'}</div>
       <div className='clock__timeWrap'>
-        <p className='clock__timeWrap__time'>{props.isRun ? getTime(time) : getTime(nowMission.time)}</p>
+        <p className='clock__timeWrap__time'>
+          {props.isRun ? getTime(time) : getTime(nowMission.time)}
+        </p>
+        {pauseButton}{playButton}
       </div>
     </div>
   )

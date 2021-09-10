@@ -115,11 +115,11 @@ class Calendar extends Component{
                     <div className='Calendar__loader__Top__Year__menu__select__icon'></div>
                   </div>
                   <ul className='Calendar__loader__Top__Year__menu__select__ul'>
-                    <li onClick={this.changeYear} value={this.state.initYear}>{this.state.initYear}</li>
-                    <li onClick={this.changeYear} value={this.state.initYear+1}>{this.state.initYear+1}</li>
-                    <li onClick={this.changeYear} value={this.state.initYear+2}>{this.state.initYear+2}</li>
-                    <li onClick={this.changeYear} value={this.state.initYear+3}>{this.state.initYear+3}</li>
-                    <li onClick={this.changeYear} value={this.state.initYear+4}>{this.state.initYear+4}</li>
+                    <li onClick={this.changeYear} value={this.state.initYear}>{this.state.initYear}年</li>
+                    <li onClick={this.changeYear} value={this.state.initYear+1}>{this.state.initYear+1}年</li>
+                    <li onClick={this.changeYear} value={this.state.initYear+2}>{this.state.initYear+2}年</li>
+                    <li onClick={this.changeYear} value={this.state.initYear+3}>{this.state.initYear+3}年</li>
+                    <li onClick={this.changeYear} value={this.state.initYear+4}>{this.state.initYear+4}年</li>
                   </ul>
                 </div> 
               </div> 

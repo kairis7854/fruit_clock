@@ -24,7 +24,7 @@ export class FruitClockDB extends Dexie {
 
 export const db = new FruitClockDB();
 
-db.on('populate', populate);
+// db.on('populate', populate);
 
 export function resetDatabase() {
   return db.transaction('rw', db.mission, db.plan, async () => {

@@ -14,6 +14,7 @@ function getTime(){
   const year = now.getFullYear();
   return {year,month,date}
 }
+
 const ListItem = props =>{
   const data = useLiveQuery(() => db.mission.toArray());
   const plan = useLiveQuery(() => db.plan.where({
@@ -39,7 +40,6 @@ const ListItem = props =>{
       })
     } 
   },[plan])
-  
 
   return(
     <div className='list'>
@@ -48,7 +48,7 @@ const ListItem = props =>{
       </div>
       <ul className='list__ul'>
         { 
-          data 
+          data && data.length > 0
             ? data.map((item)=>{
                 return(
                   <li key={item.id} className='list__ul__li' onClick={()=>{setNowMission(item)}}>
@@ -56,11 +56,16 @@ const ListItem = props =>{
                   </li>
                 )
               })
-            : null
+            : <li key='111' className='list__ul__li'>暫無任務</li>
         }
       </ul>
       <div className="list__iconAdd" onClick={()=>{props.setListType(true)}}>
           <img src={plus} className="list__iconAdd__IMG" alt="logo" />
+          {
+            data && data.length > 0
+              ? null
+              : <p className="list__iconAdd__alert">點擊添加</p>
+          }
       </div>
     </div>
   )

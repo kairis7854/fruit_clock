@@ -8,18 +8,19 @@
     &__IMG{
       width: 22%;
       filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(333deg) brightness(104%) contrast(100%);
-      padding:3%;
+      padding:5%;
     }
   }
   &__ul{
     width: 100%;
-    height: auto;
+    // height: auto;
     max-height: 50vh;
-    overflow-x:auto;
+    overflow-y:auto;
+    font-size: 1em;
     &__li{
       position:relative;
       color:white;
-      padding-left:3% ;
+      padding-left:1% ;
       cursor: pointer;
       &:hover::after{
         content:'';
@@ -49,32 +50,51 @@
       width: 22%;
       padding:5%;
     }
+    &__alert{
+      position:absolute;
+      color:white;
+      font-size: .6em;
+      transform: translateX(80%);
+      backdrop-filter:blur(5px);
+      animation:list__iconAdd__alert .5s infinite alternate;
+      @keyframes list__iconAdd__alert {
+        0%{  color:white;}
+        100%{  color:rgb(0, 255, 0);}
+      }
+    }
   }
   @media (min-width:1025px){
-    width: 90%;
-    &__ul__li{
-      height: 4;
-      line-height: 4vw;
-      &:active{
-        animation:active .2s;
-      }
-      @keyframes active{
-        0%{font-size: 1em;}
-        50%{font-size: 1.3em;}
-        100%{font-size: 1em;}
+    width: 100%;
+    &__ul{
+      &__li{
+        height: 4w;
+        line-height: 4vw;
+        &:active{
+          animation:active .2s;
+        }
+        @keyframes active{
+          0%{font-size: 1em;}
+          50%{font-size: 1.1em;}
+          100%{font-size: 1em;}
+        }
       }
     }
   }
   @media (min-width:481px) and (max-width:1024px){
-    width: 90%;
-    height: 100%;
+    height: 55vh;
+    &__iconList{
+      border-bottom:1px white solid;
+      &__IMG{
+        width: 18%;
+        filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(333deg) brightness(104%) contrast(100%);
+        padding:4%;
+      }
+    }
     &__ul{
-      height: auto;
-      max-height: 40vh;
-      overflow-x:auto;
       &__li{
         height: 5vw;
         line-height: 5vw;
+        font-size: 1em;
         &:active{
           animation:active .2s;
         }
@@ -83,6 +103,18 @@
           50%{font-size: 1.3em;}
           100%{font-size: 1em;}
         }
+      }
+    }
+    &__iconAdd{
+      display:flex;
+      justify-content:center ;
+      align-items:center;
+      width: 100%;
+      border:1px white solid;
+      &__IMG{
+        filter: invert(100%) sepia(28%) saturate(2%) hue-rotate(333deg) brightness(104%) contrast(100%);
+        width: 18%;
+        padding:4%;
       }
     }
   }

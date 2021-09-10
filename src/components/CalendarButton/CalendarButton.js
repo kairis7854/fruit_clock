@@ -1,9 +1,8 @@
 import React from 'react'
-import calendar from '../../assets/img/icon/calendar.svg'
 import './CalendarButton.less'
 
 export default function CalendarButton(props){
-  const {homeType,setHomeType} = props.props
+  const {setHomeType} = props.props
 
   return(
     <div className='CalendarButton'>

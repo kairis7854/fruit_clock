@@ -9,6 +9,7 @@ const reg = /^\d*?$/;
 const ListAdd = props =>{
   const now = new Date()
   const [data,setData] = useState({mission:'',time:''})
+  const [alertFinsh,setAlertFinsh] = useState(false)
   
   const getData = (e) => {
     if(e.target.name === 'time' && !reg.test(e.target.value)){
@@ -24,13 +25,20 @@ const ListAdd = props =>{
       alert('任務名稱或時間不能為空!')
       return
     }
+    if(data.mission.length > 10){
+      alert('任務名稱不能超過10個字!')
+      return
+    }
     if(data.time > 9999){
       alert('時間不能超過9999分鐘!')
       return
     }
     db.mission.add({ id:now.getTime(),mission:data.mission, time:data.time*2, smoke:false });
     setData({mission:'',time:''})
-    alert('添加任務成功!')
+    setAlertFinsh(true)
+    setTimeout(() => {
+      setAlertFinsh(false)
+    }, 1500);
   }
 
   return(
@@ -62,7 +70,10 @@ const ListAdd = props =>{
             placeholder='時間(分)'
             />
         </label>
-        <button>確定</button>
+        <button>
+          確定
+        </button>
+        <p className='ListAdd__form__alert' style={{display:alertFinsh ? 'inline-block' : 'none'}}>添加成功</p>
       </form>
       <div className="ListAdd__iconList" onClick={()=>{props.setListType(false)}}>
           <img src={shoppingList} className="ListAdd__iconList__IMG" alt="logo" />
