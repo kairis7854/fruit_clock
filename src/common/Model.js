@@ -1,5 +1,5 @@
 import Dexie from 'dexie'
-import { populate } from './populate';
+// import { populate } from './populate';
 
 export class FruitClockDB extends Dexie {
   constructor() {
@@ -29,7 +29,7 @@ export const db = new FruitClockDB();
 export function resetDatabase() {
   return db.transaction('rw', db.mission, db.plan, async () => {
     await Promise.all(db.tables.map(table => table.clear()));
-    await populate();
+    // await populate();
     await window.location.reload() 
   });
 }
