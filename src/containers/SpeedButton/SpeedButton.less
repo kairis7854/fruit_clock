@@ -1,145 +1,191 @@
 .speedButton{
   height: 100%;
   width:100%;
-  display:flex;
-  justify-content:space-around;
-  align-items:center;
   font-family:-apple-system, 'Segoe UI';
-
-  button{
+  display:block;
+  &__title{
+    display:none;
     position:relative;
-    overflow:hidden;
-    background-color: transparent;
-    color:#a7ddff;
-    border:none;
-    letter-spacing: 2px;
-    cursor: pointer;
-    &:hover{
-      color:#283B42;
-      background:#54bbfc ;
-      box-shadow:0 0 5px #2aadff,
-                 0 0 25px #2aadff ,
-                 0 0 50px #2aadff ,
-                 0 0 200px #2aadff ;
-      // -webkit-box-reflect:below 1px linear-gradient(transparent,#0005) ;
-    }
-    &:before{
-      content:'';
+    color:white;
+    height: 25%;
+    border-bottom:1px white solid;
+    div{
       position:absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      animation: speedButton 1s forwards;
-      animation-delay: 2s;
+      bottom: 0;
+      margin-bottom:-1px;
+      border-bottom:1px red solid;
+      font-size:1.3em;
+      line-height: 1.3em;
     }
-    @keyframes speedButton 
-    {
-      0%{border:1px solid rgba(255, 255, 255, 0)}
-      50%{border:1px solid rgba(255, 255, 255, 0.733)}
-      100%{border:1px solid rgba(255, 255, 255, 0.507)}
-    }
-    
-    >span{
-      position:absolute;
+    @media (max-width:480px) {
       display:block;
+    }
+  }
 
-      &:nth-child(1){
-        top:0;
-        left: -100%;
+  &__buttonWrap{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    height: 100%;
+    width:100%;
+    @media (max-width:480px) {
+      height: 75%;
+    }
+    button{
+      position:relative;
+      overflow:hidden;
+      background-color: transparent;
+      color:#a7ddff;
+      border:none;
+      letter-spacing: 2px;
+      cursor: pointer;
+      &:hover{
+        color:#283B42;
+        background:#54bbfc ;
+        box-shadow:0 0 5px #2aadff,
+                   0 0 25px #2aadff ,
+                   0 0 50px #2aadff ,
+                   0 0 200px #2aadff ;
+        // -webkit-box-reflect:below 1px linear-gradient(transparent,#0005) ;
+      }
+      &:before{
+        content:'';
+        position:absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 1px;
-        background:linear-gradient(90deg,transparent,#a7ddff);
-        animation: a1 1s linear 2;
-        animation-delay: 0s;
+        height: 100%;
+        animation: speedButton 1s forwards;
+        animation-delay: 2s;
       }
-      @keyframes a1 
+      @keyframes speedButton 
       {
-        0%{left:-100%}
-        100%{left:100%}
-      }
- 
-
-      &:nth-child(3){
-        bottom:0;
-        left: -100%;
-        width: 100%;
-        height: 1px;
-        background:linear-gradient(270deg,transparent,#a7ddff);
-        animation: a3 1s linear 2;
-        animation-delay: 0s;
-      }
-      @keyframes a3 
-      {
-        0%{left:100%}
-        100%{left:-100%}
+        0%{border:1px solid rgba(255, 255, 255, 0)}
+        50%{border:1px solid rgba(255, 255, 255, 0.733)}
+        100%{border:1px solid rgba(255, 255, 255, 0.507)}
       }
       
-      &:nth-child(2){
-        right:0;
-        top: -100%;
-        width: 1px;
-        height: 100%;
-        background:linear-gradient(180deg,transparent,#a7ddff);
-        animation: a2 1s linear 2;
-        animation-delay: .5s;
+      >span{
+        position:absolute;
+        display:block;
+  
+        &:nth-child(1){
+          top:0;
+          left: -100%;
+          width: 100%;
+          height: 1px;
+          background:linear-gradient(90deg,transparent,#a7ddff);
+          animation: a1 1s linear 2;
+          animation-delay: 0s;
+        }
+        @keyframes a1 
+        {
+          0%{left:-100%}
+          100%{left:100%}
+        }
+   
+  
+        &:nth-child(3){
+          bottom:0;
+          left: -100%;
+          width: 100%;
+          height: 1px;
+          background:linear-gradient(270deg,transparent,#a7ddff);
+          animation: a3 1s linear 2;
+          animation-delay: 0s;
+        }
+        @keyframes a3 
+        {
+          0%{left:100%}
+          100%{left:-100%}
+        }
+        
+        &:nth-child(2){
+          right:0;
+          top: -100%;
+          width: 1px;
+          height: 100%;
+          background:linear-gradient(180deg,transparent,#a7ddff);
+          animation: a2 1s linear 2;
+          animation-delay: .5s;
+        }
+        @keyframes a2
+        {
+          0%{top:-100%}
+          100%{top:100%}
+        }
+  
+        &:nth-child(4){
+          left:0;
+          top: 100%;
+          width: 1px;
+          height: 100%;
+          background:linear-gradient(0deg,transparent,#a7ddff);
+          animation: a4 1s linear 2;
+          animation-delay: .5s;
+        }
+        @keyframes a4
+        {
+          0%{top:100%}
+          100%{top:-100%}
+        }
       }
-      @keyframes a2
-      {
-        0%{top:-100%}
-        100%{top:100%}
+    }
+  
+    @media (min-width:1025px){
+      flex-direction: column ;
+      >button{
+        font-size:14px;
+        width: 16vh;
+        height:  16vh;
+        min-width: 76px;
+        min-height: 76px;
       }
-
-      &:nth-child(4){
-        left:0;
-        top: 100%;
-        width: 1px;
-        height: 100%;
-        background:linear-gradient(0deg,transparent,#a7ddff);
-        animation: a4 1s linear 2;
-        animation-delay: .5s;
+    }
+    @media (min-width:481px) and (max-width:1024px){
+      flex-direction: row ;
+      >button{
+        width: 17vh;
+        height:  17vh;
+        max-width:22vw;
+        max-height:22vw;
+        min-width:46px;
+        min-height:46px;
       }
-      @keyframes a4
-      {
-        0%{top:100%}
-        100%{top:-100%}
+    }
+    @media (max-width:480px) {
+      flex-direction: row ;
+      >button{
+        font-size:12px;
+        letter-spacing: 0px;
+        background:linear-gradient(180deg,#593fb8,#312ecf);
+        border-radius: 12px;
+        // border:none;
+        width: 17vh;
+        height:  17vh;
+        max-width:22vw;
+        max-height:22vw;
+        min-width:60px;
+        min-height:60px;
+        &:before{
+          content:'';
+          position:absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 12px;
+          animation: speedButton 1s forwards;
+          animation-delay: 2s;
+        }
+        @keyframes speedButton 
+        {
+          0%{border:1px solid rgba(255, 255, 255, 0)}
+          50%{border:1px solid rgba(255, 255, 255, 0.527)}
+          100%{border:none}
+        }
       }
     }
   }
-
-  @media (min-width:1025px){
-    flex-direction: column ;
-    >button{
-      font-size:14px;
-      width: 16vh;
-      height:  16vh;
-      min-width: 76px;
-      min-height: 76px;
-    }
-  }
-  @media (min-width:481px) and (max-width:1024px){
-    flex-direction: row ;
-    >button{
-      width: 17vh;
-      height:  17vh;
-      max-width:22vw;
-      max-height:22vw;
-      min-width:46px;
-      min-height:46px;
-    }
-  }
-  @media (max-width:480px) {
-    flex-direction: row ;
-    >button{
-      font-size:12px;
-      letter-spacing: 0px;
-      background:#1D6A96;
-      width: 17vh;
-      height:  17vh;
-      max-width:22vw;
-      max-height:22vw;
-      min-width:60px;
-      min-height:60px;
-    }
-  }
+ 
 }

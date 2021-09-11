@@ -23,7 +23,7 @@ const Clock = (props) =>{
   const speed = useSelector(state => state.speed)
   const [time,setTime] = useState(Number)
   const [smoke,setSmoke] = useState(false)
-  const [nowMission,setNowMission] = useState({id:'',mission: '',time:'',smoke:'',})
+  const [nowMission,setNowMission] = useState({id:'',mission: '',time:'',smoke:''})
 
   useEffect(()=>{ //從IndexedDB獲取數據
     db.mission.toArray().then((res)=>{
@@ -38,6 +38,7 @@ const Clock = (props) =>{
 
   useEffect(()=>{ //從ListItem獲取數據
     setNowMission(data)
+    if(data.id === 0 ) setSmoke(false)
   },[data])
 
   useEffect(() => { //計時器

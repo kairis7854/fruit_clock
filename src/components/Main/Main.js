@@ -11,7 +11,7 @@ const Main = (props) => {
     <div className='Main' style={{opacity:props.homeType ? 1 : 0,display:props.homeType ?'flex':'none'}}>
       <div className='Main__SpeedButton'><SpeedButton/></div>
       <div className='Main__Clock'><Clock isRun={isRun} setIsRun={setIsRun} /></div>
-      <div className='Main__List'><List isRun={isRun} /></div>
+      <div className='Main__List'><List isRun={isRun} setIsRun={setIsRun}/></div>
     </div>
   )
 }

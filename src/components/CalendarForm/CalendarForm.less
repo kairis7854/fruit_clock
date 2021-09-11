@@ -1,6 +1,7 @@
 .CalendarForm{
   width: 100%;
   height: 100%;
+  z-index: 9999;
   &__outside{
     display:block;
     width: 100%;
@@ -8,7 +9,7 @@
     animation: CalendarForm1 .5s forwards;
     @keyframes CalendarForm1 {
       0%{backdrop-filter:brightness(100%)}
-      100%{backdrop-filter:brightness(40%)}
+      100%{backdrop-filter:brightness(60%)}
     }
   }
   &__inner{
@@ -26,6 +27,7 @@
     @media (min-width:481px) and (max-width:1024px){
       left: 20%;
       width: 60%;
+      margin-top: 2%;;
     }
     @media (max-width:480px) {
       left: 5%;
@@ -35,7 +37,7 @@
       float:right;
       background:url('../../assets/img/icon/cancel.svg');
       filter: invert(100%) sepia(0%) saturate(5034%) hue-rotate(227deg) brightness(113%) contrast(100%);
-                  width: 12px;
+      width: 12px;
       height: 12px;
       text-align: center;
       line-height: 12px;

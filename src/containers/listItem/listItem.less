@@ -12,16 +12,21 @@
     }
   }
   &__ul{
+    position:relative;
     width: 100%;
-    // height: auto;
     max-height: 50vh;
     overflow-y:auto;
-    font-size: 1em;
+    font-size: .8em;
     &__li{
+      display:flex;
+      align-items:center;
+      justify-content:flex-start;
       position:relative;
       color:white;
       padding-left:1% ;
+      padding-right:-10%;
       cursor: pointer;
+      width: 100%;
       &:hover::after{
         content:'';
         position:absolute;
@@ -35,6 +40,26 @@
       @keyframes hover{
         0%{width: 0;}
         100%{width: 100%;}
+      }
+      &__content{
+        width: 90%;
+      }
+      &__cancel{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width: 10%;
+        height: 1em;
+        &__IMG{
+          // background:green;
+          width: .8em;
+          height: .8em;
+          background-repeat: no-repeat;
+          background-size: cover;
+          z-index: 10;
+          // filter: invert(53%) sepia(0%) saturate(0%) hue-rotate(211deg) brightness(95%) contrast(78%);
+          filter: invert(100%) sepia(100%) saturate(2%) hue-rotate(234deg) brightness(105%) contrast(101%);
+        }
       }
     }
   }
@@ -92,8 +117,8 @@
     }
     &__ul{
       &__li{
-        height: 5vw;
-        line-height: 5vw;
+        height: 4vw;
+        line-height: 4vw;
         font-size: 1em;
         &:active{
           animation:active .2s;

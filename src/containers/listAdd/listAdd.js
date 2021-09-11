@@ -25,8 +25,8 @@ const ListAdd = props =>{
       alert('任務名稱或時間不能為空!')
       return
     }
-    if(data.mission.length > 10){
-      alert('任務名稱不能超過10個字!')
+    if(data.mission.length > 9){
+      alert('任務名稱不能超過9個字!')
       return
     }
     if(data.time > 9999){

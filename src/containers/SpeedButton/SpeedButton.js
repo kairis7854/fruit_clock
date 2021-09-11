@@ -15,6 +15,10 @@ const SpeedButton = () =>{
 
   return(
     <div className='speedButton'>
+      <div  className='speedButton__title'>
+        <div>調整時間流速</div>
+      </div>
+      <div className='speedButton__buttonWrap'>
         <button className='speedButton__normalButton' onClick={normal} title='時間流速:普通'>
           普通速度
           <span></span>
@@ -43,6 +47,7 @@ const SpeedButton = () =>{
           <span></span>
           <span></span>
         </button>
+      </div>
     </div>
   )
 }

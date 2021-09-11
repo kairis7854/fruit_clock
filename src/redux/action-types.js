@@ -9,3 +9,4 @@ export const FAST = 'fast'
 
 //選中任務
 export const NOWMISSION = 'nowMission'
+export const CLEAN_MISSION = 'cleanMission'
