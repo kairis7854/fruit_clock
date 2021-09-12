@@ -19,9 +19,8 @@ export default function Reset(){
       </div>
       <div className='Reset__question' style={{display:display ? 'block' : 'none'}}>
         <p>是否回到初始狀態？</p>
-        <br />
-        <input type="button" value='YES' onClick={()=>{onResetDatabase()}}/>
-        <input type="button" value='NO' onClick={()=>{setDisplay(false)}}/>
+        <input className='Reset__question__YES' type="button" value='YES' onClick={()=>{onResetDatabase()}}/>
+        <input className='Reset__question__NO' type="button" value='NO' onClick={()=>{setDisplay(false)}}/>
       </div>
     </div>
   )

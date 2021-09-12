@@ -109,7 +109,9 @@ const Clock = (props) =>{
   return(
     <div className='clock'>
       {/* <div className='test'>000</div> */}
-      <div className='clock__mission'>{smoke ? '休息' : nowMission.mission}{smoke ? null : nowMission.smoke && '(休息)'}</div>
+      <div className='clock__mission'>
+        <p>{smoke ? '休息' : nowMission.mission}{smoke ? null : nowMission.smoke && '(休息)'}</p>
+      </div>
       <div className='clock__timeWrap'>
         <p className='clock__timeWrap__time'>
           {props.isRun ? getTime(time) : getTime(nowMission.time)}

@@ -84,9 +84,13 @@ class Calendar extends Component{
       </li>
     )
     const monthOption = new Array(12).fill("").map(
-      (x, index) => <li key={index + 1} onClick={this.changeMonth} value={index + 1}>{index + 1}</li>
+      (x, index) => <li key={index + 1} onClick={this.changeMonth} value={index + 1}>{index + 1}月</li>
     )
-
+    let showMonth = () => {
+      let newMonth = this.state.month
+      if(this.state.month < 10) newMonth = `0${this.state.month}`
+      return newMonth
+    }
     return(
       <div className='Calendar' style={{display:!homeType ? 'flex':'none'}} >
         <div className='Calendar__loader'> 
@@ -96,7 +100,7 @@ class Calendar extends Component{
               <div className='Calendar__loader__Top__Month__menu'>
                 <div className='Calendar__loader__Top__Month__menu__select'>
                   <div>
-                    <div >{this.state.month}</div>
+                    <div>{showMonth()}</div>
                     <div>月</div>  
                     <div className='Calendar__loader__Top__Month__menu__select__icon'></div>
                   </div>
