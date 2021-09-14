@@ -78,6 +78,9 @@ const Clock = (props) =>{
   }
   
   const onPlay = () => {
+    if(nowMission.id === 9){ //代表初始加載
+      return
+    }
     if(nowMission.id === 0){
       alert('請選擇或創建新的任務。')
       return

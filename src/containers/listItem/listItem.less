@@ -17,6 +17,7 @@
     max-height: 50vh;
     overflow-y:auto;
     font-size: .8em;
+
     &__li{
       display:flex;
       align-items:center;
@@ -27,6 +28,7 @@
       padding-right:-10%;
       cursor: pointer;
       width: 100%;
+      white-space:nowrap;
       &:hover::after{
         content:'';
         position:absolute;
@@ -43,8 +45,8 @@
         100%{width: 100%;}
       }
       &__content{
-        overflow: auto;
-        // text-overflow : ellipsis;
+        overflow: hidden;
+        text-overflow : ellipsis;
         width: 90%;
       }
       &__cancel{

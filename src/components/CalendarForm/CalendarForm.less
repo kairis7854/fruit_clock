@@ -51,16 +51,21 @@
     &__date{
       float:right;
       color:#7BC5A1;
-      font-size: 19vh;
-      margin-top:-8vh;
+      font-size: 8em;
+      margin-top:-.5em;
       margin-right:20px;
+
+      // font-size: 19vh;
+      // margin-top:-8vh;
+      // margin-right:20px;
+
       @media (min-width:481px) and (max-width:1024px){
-        font-size: 13vh;
-        margin-top:-5vh;
+        font-size: 6em;
+        margin-top:-.4em;
       }
       @media (max-width:480px) {
-        font-size: 12vh;
-        margin-top:-4vh;
+        font-size: 4em;
+        margin-top:-.3em;
       }
     }
     &__plan{
@@ -70,6 +75,9 @@
       height: 50%;
       margin-bottom:1%;
       font-size: 14px;
+      @media (max-width:480px) {
+        width: 55%;
+      }
       strong{
         font-size: 3vh;
       }

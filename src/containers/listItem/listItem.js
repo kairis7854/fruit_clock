@@ -7,6 +7,7 @@ import {db} from '../../common/Model'
 import { useLiveQuery } from "dexie-react-hooks";
 import {NOWMISSION} from '../../redux/action-types.js'
 import {CLEAN_MISSION} from '../../redux/action-types.js'
+import { reqMusic } from '../../api'
 import './listItem.less'
 
 function getTime(){
@@ -34,6 +35,23 @@ const ListItem = props =>{
     if(props.isRun) return
     dispatch({type:NOWMISSION,data:item})
   }
+
+  useEffect(()=>{  //重製後的初始數據加載
+    if(data && data.length && data[0].id === 9){
+      async function start(){
+        let first = await reqMusic()
+        db.mission.bulkAdd([
+            {id:1,mission: first,time:4,smoke:false},
+            {id:2,mission:await reqMusic(),time:5,smoke:false},
+            {id:3,mission:await reqMusic(),time:6,smoke:false},
+            {id:4,mission:await reqMusic(),time:4,smoke:false}
+          ]);
+        db.mission.delete(9)
+        dispatch({type:NOWMISSION,data:{id:1,mission: first,time:3,smoke:false}})//沒有使用state或props
+      }
+      start()
+    }
+  },[data])// eslint-disable-line react-hooks/exhaustive-deps
 
   useEffect(()=>{
     if(plan && plan.length > 0){

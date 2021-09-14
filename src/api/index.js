@@ -7,3 +7,9 @@ export const reqWeather = async()=> {
   return value
 }
 
+//歌單
+export const reqMusic = async() => {
+  let res = await axios.get(`https://api.uomg.com/api/rand.music?sort=热歌榜&format=json`)
+  let value = `欣賞🎵${res.data.data.name}-${res.data.data.artistsname}`
+  return value
+}
