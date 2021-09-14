@@ -9,7 +9,7 @@ const reg = /^\d*?$/;
 const ListAdd = props =>{
   const now = new Date()
   const [data,setData] = useState({mission:'',time:''})
-  const [alertFinsh,setAlertFinsh] = useState(false)
+  const [formAlert,setFormAlert] = useState('')
   
   const getData = (e) => {
     if(e.target.name === 'time' && !reg.test(e.target.value)){
@@ -22,22 +22,31 @@ const ListAdd = props =>{
   const onSubmit = (e) =>{
     e.preventDefault();
     if(!data.mission || !data.time){
-      alert('任務名稱或時間不能為空!')
+      setFormAlert('任務名稱或時間不能為空!')
+      setTimeout(() => {
+        setFormAlert('')
+      }, 1800);
       return
     }
     if(data.mission.length > 9){
-      alert('任務名稱不能超過9個字!')
-      // return
+      setFormAlert('任務名稱不能超過9個字!')
+      setTimeout(() => {
+        setFormAlert('')
+      }, 1800);
+      return
     }
     if(data.time > 9999){
-      alert('時間不能超過9999分鐘!')
+      setFormAlert('時間不能超過9999分鐘!')
+      setTimeout(() => {
+        setFormAlert('')
+      }, 1500);
       return
     }
     db.mission.add({ id:now.getTime(),mission:data.mission, time:data.time*2, smoke:false });
     setData({mission:'',time:''})
-    setAlertFinsh(true)
+    setFormAlert('添加成功')
     setTimeout(() => {
-      setAlertFinsh(false)
+      setFormAlert('')
     }, 1500);
   }
 
@@ -70,10 +79,12 @@ const ListAdd = props =>{
             placeholder='時間(分)'
             />
         </label>
-        <button>
-          確定
-        </button>
-        <p className='ListAdd__form__alert' style={{display:alertFinsh ? 'inline-block' : 'none'}}>添加成功</p>
+        <div className='ListAdd__form__check'>
+          <button>
+            確定
+          </button>
+          <p className='ListAdd__form__check__alert' style={{color:formAlert === '添加成功' ? 'rgb(77, 255, 53)' : 'rgb(255, 82, 82)'}}>{formAlert}</p>
+        </div>
       </form>
       <div className="ListAdd__iconList" onClick={()=>{props.setListType(false)}}>
           <img src={shoppingList} className="ListAdd__iconList__IMG" alt="logo" />

@@ -41,7 +41,7 @@ const ListItem = props =>{
       async function start(){
         let first = await reqMusic()
         db.mission.bulkAdd([
-            {id:1,mission: first,time:4,smoke:false},
+            {id:1,mission: first,time:3,smoke:false},
             {id:2,mission:await reqMusic(),time:5,smoke:false},
             {id:3,mission:await reqMusic(),time:6,smoke:false},
             {id:4,mission:await reqMusic(),time:4,smoke:false}

@@ -81,15 +81,17 @@
       padding:5%;
     }
     &__alert{
+      display: hidden;
       position:absolute;
-      color:white;
+      color:rgba(255, 255, 255, 0);
       font-size: .6em;
       transform: translateX(80%);
       backdrop-filter:blur(5px);
-      animation:list__iconAdd__alert .5s infinite alternate;
+      animation:list__iconAdd__alert .6s infinite alternate;
+      animation-delay: .5s;
       @keyframes list__iconAdd__alert {
-        0%{  color:white;}
-        100%{  color:rgb(0, 255, 0);}
+        0%{  color:rgba(206, 255, 143, 0.897);  display: block;}
+        100%{  color:rgba(0, 255, 0, 0.829);   display: block;}
       }
     }
   }
