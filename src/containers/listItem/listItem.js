@@ -4,17 +4,17 @@ import iconList from '../../assets/img/icon/shopping-list.svg'
 import cancel from '../../assets/img/icon/cancel.svg'
 import plus from '../../assets/img/icon/plus.svg'
 import {db} from '../../common/Model'
-import { useLiveQuery } from "dexie-react-hooks";
-import {NOWMISSION} from '../../redux/action-types.js'
+import { useLiveQuery } from "dexie-react-hooks"
+import {NOW_MISSION} from '../../redux/action-types.js'
 import {CLEAN_MISSION} from '../../redux/action-types.js'
 import { reqMusic } from '../../api'
 import './listItem.less'
 
 function getTime(){
   const now = new Date()　
-  const date = now.getDate();
-  const month = now.getMonth()+1;
-  const year = now.getFullYear();
+  const date = now.getDate()
+  const month = now.getMonth()+1
+  const year = now.getFullYear()
   return {year,month,date}
 }
 
@@ -33,7 +33,7 @@ const ListItem = props =>{
   const dispatch = useDispatch();
   const setNowMission = (item) => {
     if(props.isRun) return
-    dispatch({type:NOWMISSION,data:item})
+    dispatch({type:NOW_MISSION,data:item})
   }
 
   useEffect(()=>{  //重製後的初始數據加載
@@ -41,13 +41,13 @@ const ListItem = props =>{
       async function start(){
         let first = await reqMusic()
         db.mission.bulkAdd([
-            {id:1,mission: first,time:3,smoke:false},
-            {id:2,mission:await reqMusic(),time:5,smoke:false},
-            {id:3,mission:await reqMusic(),time:6,smoke:false},
-            {id:4,mission:await reqMusic(),time:4,smoke:false}
+            {id:1,mission: first,time:10,smoke:false},
+            {id:2,mission:await reqMusic(),time:10,smoke:false},
+            {id:3,mission:await reqMusic(),time:10,smoke:false},
+            {id:4,mission:await reqMusic(),time:10,smoke:false}
           ]);
         db.mission.delete(9)
-        dispatch({type:NOWMISSION,data:{id:1,mission: first,time:3,smoke:false}})//沒有使用state或props
+        dispatch({type:NOW_MISSION,data:{id:1,mission: first,time:10,smoke:false}})//這裡沒有使用state或props
       }
       start()
     }
@@ -56,7 +56,7 @@ const ListItem = props =>{
   useEffect(()=>{
     if(plan && plan.length > 0){
       plan.forEach((item,index)=>{
-        db.mission.add({ id:item.id,mission:item.mission, time:item.time*2, smoke:false });
+        db.mission.add({ id:item.id,mission:item.mission, time:item.time*60, smoke:false });
         db.plan.update(item.id,{state:'start'})
       })
     } 

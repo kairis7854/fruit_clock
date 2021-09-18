@@ -42,7 +42,7 @@ const ListAdd = props =>{
       }, 1500);
       return
     }
-    db.mission.add({ id:now.getTime(),mission:data.mission, time:data.time*2, smoke:false });
+    db.mission.add({ id:now.getTime(),mission:data.mission, time:data.time*60, smoke:false });
     setData({mission:'',time:''})
     setFormAlert('添加成功')
     setTimeout(() => {

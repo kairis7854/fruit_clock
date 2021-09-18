@@ -8,5 +8,5 @@ export const SPEEDY = 'speedy'
 export const FAST = 'fast'
 
 //選中任務
-export const NOWMISSION = 'nowMission'
-export const CLEAN_MISSION = 'cleanMission'
+export const NOW_MISSION = 'NOW_MISSION'
+export const CLEAN_MISSION = 'CLEAN_MISSION'

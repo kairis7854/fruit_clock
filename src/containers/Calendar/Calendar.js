@@ -11,6 +11,7 @@ function changeLength(e){
   return res
 }
 
+//作品初期目的是為了練習hook與flex，想複習class時還是會寫些
 class Calendar extends Component{
   state = {
     initYear:'',
@@ -39,7 +40,6 @@ class Calendar extends Component{
       date:date,
       totalDate:totalDate,  
     })
-
 
     db.plan  //檢查計畫是否逾期
     .where('state')
